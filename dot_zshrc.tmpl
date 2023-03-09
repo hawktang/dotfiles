@@ -106,11 +106,6 @@ znap source wfxr/forgit
 
 znap source NullSense/fuzzy-sys
 
-znap source not-poma/lazyshell
-bindkey '^g' __lazyshell_complete
-
-znap source NullSense/fuzzy-sys
-
 znap function _pyenv pyenv              'eval "$( pyenv init - --no-rehash )"'
 compctl -K    _pyenv pyenv
 
@@ -312,5 +307,10 @@ unset __conda_setup
 {{ else }}
 # other operating system
 {{ end }}
+if [ -f ~/.credentials.zsh ]; then
+    source ~/.credentials.zsh
+    znap source not-poma/lazyshell
+    bindkey '^g' __lazyshell_complete
+fi
 
-[ -f ~/.credentials.zsh ] && source ~/.credentials.zsh
+
