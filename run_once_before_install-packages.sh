@@ -12,4 +12,6 @@ brew "awscli"
 brew "chezmoi"
 brew "thefuck"
 brew "tldr"
+brew "duf"
+brew "ncdu"
 EOF
