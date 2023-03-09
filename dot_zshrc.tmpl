@@ -139,7 +139,7 @@ setopt hist_ignore_dups
 setopt hist_find_no_dups
 unsetopt HIST_REDUCE_BLANKS
 
-export FZF_COMPLETION_TRIGGER=''
+export FZF_COMPLETION_TRIGGER='`'
 
 
 export FZF_DEFAULT_COMMAND='fd --type f'
@@ -262,7 +262,7 @@ znap source zsh-users/zsh-syntax-highlighting
 bindkey '\e[A' fzf-history-widget
 bindkey '\eOA' fzf-history-widget
 
-zle     -N   fzf-completion
+# zle     -N   fzf-completion
 bindkey '^[[Z' fzf-completion
 
 
