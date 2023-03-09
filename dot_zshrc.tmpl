@@ -257,10 +257,6 @@ znap source zsh-users/zsh-syntax-highlighting
 bindkey '\e[A' fzf-history-widget
 bindkey '\eOA' fzf-history-widget
 
-# zle     -N   fzf-completion
-bindkey '^l' fzf-completion
-
-
 alias l='exa  --icons --classify  --long --header --group --color auto --color-scale --git --sort=modified --group-directories-first --git-ignore'
 alias la='exa  --icons --classify  --long --header --group --color auto --color-scale --git --sort=modified --group-directories-first --all'
 alias ll='exa  --icons --classify  --long --header --group --color auto --color-scale --git --sort=modified --group-directories-first --tree  --level=2 --all'
@@ -307,6 +303,7 @@ unset __conda_setup
 {{ else }}
 # other operating system
 {{ end }}
+
 if [ -f ~/.credentials.zsh ]; then
     source ~/.credentials.zsh
     znap source not-poma/lazyshell
