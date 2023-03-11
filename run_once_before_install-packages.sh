@@ -14,4 +14,5 @@ brew "thefuck"
 brew "tldr"
 brew "duf"
 brew "ncdu"
+brew "byobu"
 EOF
