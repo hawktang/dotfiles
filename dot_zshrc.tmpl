@@ -119,6 +119,7 @@ complete -o nospace -o default -o bashdefault \
 znap function _pipenv pipenv            'eval "$( pipenv --completion )"'
 compdef       _pipenv pipenv
 
+setopt +o nomatch
 
 setopt auto_cd
 HISTSIZE=10000
