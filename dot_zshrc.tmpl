@@ -316,6 +316,10 @@ else
     fi
 fi
 unset __conda_setup
+
+if [ -f "/opt/conda/etc/profile.d/mamba.sh" ]; then
+    . "/opt/conda/etc/profile.d/mamba.sh"
+fi
 # <<< conda initialize <<<
 
 {{ else }}
