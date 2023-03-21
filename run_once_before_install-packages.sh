@@ -1,7 +1,7 @@
 #!/bin/bash
 
 brew bundle --no-lock --file=/dev/stdin <<EOF
-brew "git"
+# brew "git"
 brew "midnight-commander"
 brew "bat"
 brew "exa"
