@@ -94,6 +94,6 @@ force_display = true
 ap-southeast-2 = "au"
 us-east-1 = "va"
 
-[character]
-success_symbol = "[](bold green)"
-error_symbol = "[](bold red)"
+# [character]
+# success_symbol = "[❯](bold green)"
+# error_symbol = "[✖](bold red)"
