@@ -126,7 +126,7 @@ disabled = false
 # unknown_indicator = 'mystery shell'
 # style = 'cyan bold'
 format = '[ $indicator]($style) '
-disabled = false
+disabled = true
 
 [directory]
 truncation_length = 10
