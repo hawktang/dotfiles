@@ -108,7 +108,7 @@ show_always = true
 ssh_only = false
 format = '[ $localipv4]($style) '
 disabled = false
-style='grey'
+style='green'
 
 [hostname]
 ssh_symbol = " "
