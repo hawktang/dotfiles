@@ -109,13 +109,13 @@ style_user = 'white'
 ssh_only = false
 format = '[ $localipv4]($style) '
 disabled = false
-style='dimmed green'
+style='dimmed cyan'
 
 [hostname]
 ssh_symbol = " "
 ssh_only = true
 format='[$ssh_symbol$hostname]($style) '
-style='bold dimmed green'
+style='bold dimmed cyan'
 disabled = false
 
 [shell]
@@ -140,14 +140,14 @@ style='bold yellow'
 [conda]
 format = '[$symbol$environment]($style) '
 symbol=' '
-style='bold cyan'
+style='bold green'
 ignore_base = false
 
 [python]
 symbol = ' '
 format = '[${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
 detect_extensions=['py','ipynb']
-style='bright-cyan'
+style='bright-green'
 # pyenv_version_name = true
 
 [nodejs]
