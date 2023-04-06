@@ -103,7 +103,7 @@ Amazon = " "
 format= '[ $user]($style) '
 disabled = false
 show_always = true
-style = 'white'
+style_user = 'white'
 
 [localip]
 ssh_only = false
