@@ -108,6 +108,7 @@ show_always = true
 ssh_only = false
 format = '[ $localipv4]($style) '
 disabled = false
+style='grey'
 
 [hostname]
 ssh_symbol = " "
@@ -124,7 +125,7 @@ disabled = false
 # fish_indicator = ' '
 # powershell_indicator = ' '
 # unknown_indicator = 'mystery shell'
-# style = 'cyan bold'
+style = 'grey'
 format = '[ $indicator]($style) '
 disabled = true
 
