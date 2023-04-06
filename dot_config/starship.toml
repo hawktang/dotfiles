@@ -95,9 +95,9 @@ symbol = ' '
 disabled = false
 
 [os.symbols]
-Macos = ""
-Ubuntu = ""
-Amazon = ""
+Macos = " "
+Ubuntu = " "
+Amazon = " "
 
 [username]
 format= '$user'
@@ -116,19 +116,19 @@ format='[$ssh_symbol$hostname]($style)'
 disabled = true
 
 [shell]
-cmd_indicator=''
+cmd_indicator=' '
 xonsh_indicator='@'
-zsh_indicator='$'
-bash_indicator='$'
-# fish_indicator = ''
-powershell_indicator = ''
+zsh_indicator='\$'
+bash_indicator='\$'
+# fish_indicator = ' '
+powershell_indicator = ' '
 # unknown_indicator = 'mystery shell'
 # style = 'cyan bold'
 disabled = false
 
 [directory]
-truncation_length = 8
-truncation_symbol = '…/'
+truncation_length = 10
+truncation_symbol = ''
 
 [conda]
 format = '[$symbol$environment]($style) '
