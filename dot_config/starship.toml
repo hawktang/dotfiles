@@ -2,7 +2,6 @@ format = """
 $username\
 $hostname\
 $localip\
-$shell\
 $shlvl\
 $singularity\
 $kubernetes\
@@ -74,6 +73,7 @@ $crystal\
 $custom\
 $sudo\
 $cmd_duration\
+$shell\
 $jobs\
 $battery\
 $time\
@@ -185,7 +185,7 @@ format = '([ Added: +$added]($added_style))([ Deleted: -$deleted]($deleted_style
 
 [time]
 disabled = false
-format = '[$time]($style) '
+format = 'on [$time]($style) '
 time_format = '%T, %b %d'
 
 [aws]
