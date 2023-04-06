@@ -136,7 +136,8 @@ format = '[]($style)[$read_only]($read_only_style)[ $path]($style) '
 
 [conda]
 format = '[$symbol$environment]($style) '
-ignore_base = false
+symbol=' '
+ignore_base = true
 
 [python]
 symbol = ' '
@@ -192,7 +193,7 @@ format = '([ Added: +$added]($added_style))([ Deleted: -$deleted]($deleted_style
 [time]
 disabled = false
 format = '[$time]($style) '
-time_format = ' %T  %b %d'
+time_format = ' %T  %b %d'
 
 [aws]
 format = '[$symbol$profile(\($region\))]($style) '
