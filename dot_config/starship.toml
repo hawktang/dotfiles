@@ -202,7 +202,7 @@ format = '([ Added: +$added]($added_style))([ Deleted: -$deleted]($deleted_style
 disabled = false
 format = '[$time]($style) '
 time_format = ' %T  %b %d'
-style = 'gray'
+style = 'dimmed yellow'
 
 [aws]
 format = '[$symbol$profile(\($region\))]($style) '
