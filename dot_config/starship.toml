@@ -131,7 +131,7 @@ disabled = false
 truncation_length = 10
 truncation_symbol = ''
 read_only='  '
-format = '[ $path]($style)[$read_only]($read_only_style) '
+format = '[ $path]($style)[$read_only]($read_only_style) '
 
 [conda]
 format = '[$symbol$environment]($style) '
