@@ -113,7 +113,7 @@ disabled = false
 ssh_symbol = "󰢹 "
 ssh_only = false
 format='[$ssh_symbol$hostname]($style)'
-disabled = flase
+disabled = false
 
 [shell]
 # cmd_indicator=' '
