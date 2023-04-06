@@ -139,7 +139,7 @@ read_only='  '
 format = '[]($style)[$read_only]($read_only_style)[ $path]($style) '
 style='bold yellow' 
 repo_root_format='[$before_root_path]($before_repo_root_style)[$repo_root]($repo_root_style)[$path]($style)[$read_only]($read_only_style) '
-fish_style_pwd_dir_length=1
+fish_style_pwd_dir_length=3
 home_symbol = ' '
 repo_root_style='bold purple' 
 
