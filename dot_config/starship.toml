@@ -72,7 +72,7 @@ $env_var\
 $crystal\
 $custom\
 $sudo\
-$fill
+$fill \
 $cmd_duration\
 $line_break\
 $jobs\
