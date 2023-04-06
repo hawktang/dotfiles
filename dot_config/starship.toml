@@ -157,7 +157,7 @@ format = '[$symbol($version )]($style)'
 
 [sudo]
 # style = 'bold green'
-symbol = ' '
+symbol = ' '
 # 👩‍💻
 disabled = false
 
