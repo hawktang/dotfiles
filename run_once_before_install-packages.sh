@@ -17,4 +17,5 @@ brew "ncdu"
 brew "byobu"
 brew "zoxide"
 brew "rsync"
+brew "aria2"
 EOF
