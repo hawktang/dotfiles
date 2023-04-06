@@ -16,4 +16,5 @@ brew "duf"
 brew "ncdu"
 brew "byobu"
 brew "zoxide"
+brew "rsync"
 EOF
