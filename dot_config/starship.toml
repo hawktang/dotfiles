@@ -103,6 +103,7 @@ Amazon = " "
 format= '[ $user]($style) '
 disabled = false
 show_always = true
+style = 'white'
 
 [localip]
 ssh_only = false
@@ -134,7 +135,7 @@ truncation_length = 10
 truncation_symbol = ''
 read_only='  '
 format = '[]($style)[$read_only]($read_only_style)[ $path]($style) '
-style='bold white'
+style='bold yellow'
 
 [conda]
 format = '[$symbol$environment]($style) '
