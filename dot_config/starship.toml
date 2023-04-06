@@ -209,7 +209,7 @@ style = 'dimmed yellow'
 # format = '[$symbol$profile(\($region\))]($style) '
 # style = "bold yellow"
 # symbol = "∀⍵₷☁️☁️"
-disabled = false
+disabled = true
 force_display = true
 # [aws.region_aliases]
 # ap-southeast-2 = "au"
