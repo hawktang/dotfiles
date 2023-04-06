@@ -125,13 +125,13 @@ disabled = false
 # powershell_indicator = ' '
 # unknown_indicator = 'mystery shell'
 # style = 'cyan bold'
-format = '[ $indicator]($style) '
+format = '[ $indicator]($style) '
 disabled = false
 
 [directory]
 truncation_length = 10
 truncation_symbol = ''
-read_only='  '
+read_only='  '
 format = '[]($style)[$read_only]($read_only_style)[ $path]($style) '
 
 [conda]
