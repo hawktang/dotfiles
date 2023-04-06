@@ -185,7 +185,7 @@ format = '([ Added: +$added]($added_style))([ Deleted: -$deleted]($deleted_style
 
 [time]
 disabled = false
-format = 'on [$time]($style) '
+format = ' [$time]($style) '
 time_format = '%T, %b %d'
 
 [aws]
