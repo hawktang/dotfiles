@@ -1,7 +1,7 @@
 format = """
+$username\
 $directory\
 $hostname\
-$username\
 $localip\
 $shlvl\
 $singularity\
