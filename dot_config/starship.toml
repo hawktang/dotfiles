@@ -1,11 +1,11 @@
 format = """
+$directory\
+$hostname\
 $username\
 $localip\
-$hostname\
 $shlvl\
 $singularity\
 $kubernetes\
-$directory\
 $vcsh\
 $fossil_branch\
 $git_branch\
