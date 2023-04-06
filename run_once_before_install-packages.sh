@@ -15,4 +15,5 @@ brew "tldr"
 brew "duf"
 brew "ncdu"
 brew "byobu"
+brew "zoxide"
 EOF
