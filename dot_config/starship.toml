@@ -1,4 +1,9 @@
-format = '$all $fill $time'
+format = """
+$all $fill $time
+$shell$character
+"""
+
+
 # right_format = '''$status$time'''
 
 [fill]
