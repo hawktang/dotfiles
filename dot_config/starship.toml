@@ -138,14 +138,14 @@ format = '[]($style)[$read_only]($read_only_style)[ $path]($style) '
 [conda]
 format = '[$symbol$environment]($style) '
 symbol=' '
-style='blue'
+style='purple'
 ignore_base = true
 
 [python]
 symbol = ' '
 format = '[${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
 detect_extensions=['py','ipynb']
-style='blue'
+style='purple'
 # pyenv_version_name = true
 
 [nodejs]
