@@ -1,13 +1,4 @@
 format = """
-$username\
-$hostname\
-$localip\
-$cmd_duration\
-$jobs\
-$battery\
-$time\
-$status\
-$line_break\
 $directory\
 $shlvl\
 $singularity\
@@ -82,7 +73,17 @@ $shell\
 $line_break\
 $os\
 $container\
-$character"""
+$character\
+$line_break\
+$username\
+$hostname\
+$localip\
+$cmd_duration\
+$jobs\
+$battery\
+$time\
+$status\
+"""
 
 
 # right_format = '''$status$time'''
