@@ -1,4 +1,13 @@
 format = """
+$username\
+$hostname\
+$localip\
+$cmd_duration\
+$jobs\
+$battery\
+$time\
+$status\
+$line_break\
 $directory\
 $shlvl\
 $singularity\
@@ -74,15 +83,6 @@ $line_break\
 $os\
 $container\
 $character\
-$line_break\
-$username\
-$hostname\
-$localip\
-$cmd_duration\
-$jobs\
-$battery\
-$time\
-$status\
 """
 
 
