@@ -100,19 +100,20 @@ Ubuntu = " "
 Amazon = " "
 
 [username]
-format= ' $user '
+format= '[ $user]($style) '
 disabled = false
 show_always = true
 
 [localip]
 ssh_only = false
-format = '$localipv4 '
+format = '[$localipv4]($style) '
 disabled = false
 
 [hostname]
 ssh_symbol = " "
 ssh_only = true
 format='[$ssh_symbol$hostname]($style) '
+style='bold dimmed green'
 disabled = false
 
 [shell]
