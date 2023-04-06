@@ -124,7 +124,7 @@ disabled = true
 # powershell_indicator = ' '
 # unknown_indicator = 'mystery shell'
 # style = 'cyan bold'
-format = ' [$indicator]($style) '
+format = '[ $indicator]($style) '
 disabled = false
 
 [directory]
