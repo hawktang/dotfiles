@@ -1,4 +1,4 @@
-# format = '$all $fill $time'
+format = '$all $fill $time'
 # right_format = '''$status$time'''
 
 [fill]
