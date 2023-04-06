@@ -2,7 +2,6 @@ format = """
 $directory\
 $username\
 $hostname\
-$localip\
 $shlvl\
 $singularity\
 $kubernetes\
@@ -72,6 +71,7 @@ $env_var\
 $crystal\
 $custom\
 $sudo\
+$localip\
 $cmd_duration\
 $shell\
 $jobs\
