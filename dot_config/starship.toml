@@ -100,7 +100,7 @@ Ubuntu = " "
 Amazon = " "
 
 [username]
-format= '$user '
+format= ' $user '
 disabled = false
 show_always = true
 
@@ -112,7 +112,7 @@ disabled = false
 [hostname]
 ssh_symbol = " "
 ssh_only = true
-format='[$ssh_symbol$hostname]($style)'
+format='[$ssh_symbol$hostname]($style) '
 disabled = false
 
 [shell]
