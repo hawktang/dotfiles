@@ -1,7 +1,6 @@
 format = """
 $directory\
 $username\
-$hostname\
 $shlvl\
 $singularity\
 $kubernetes\
@@ -71,9 +70,10 @@ $env_var\
 $crystal\
 $custom\
 $sudo\
+$shell\
+$hostname\
 $localip\
 $cmd_duration\
-$shell\
 $jobs\
 $battery\
 $time\
@@ -138,14 +138,14 @@ format = '[]($style)[$read_only]($read_only_style)[ $path]($style) '
 [conda]
 format = '[$symbol$environment]($style) '
 symbol=' '
-style='purple'
-ignore_base = true
+style='dimmed purple'
+ignore_base = false
 
 [python]
 symbol = ' '
 format = '[${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
 detect_extensions=['py','ipynb']
-style='purple'
+style='dimmed purple'
 # pyenv_version_name = true
 
 [nodejs]
