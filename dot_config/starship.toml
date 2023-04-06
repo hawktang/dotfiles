@@ -141,6 +141,7 @@ ignore_base = false
 [python]
 symbol = ' '
 format = '[${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
+detect_extensions=['py','ipynb']
 # pyenv_version_name = true
 
 [sudo]
