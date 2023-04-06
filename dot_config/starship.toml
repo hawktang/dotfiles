@@ -1,5 +1,9 @@
-# format = '$all$nodejs'
-right_format = '''$status$time'''
+# format = '$all $fill $time'
+# right_format = '''$status$time'''
+
+[fill]
+symbol = ' '
+# style = 'bold green'
 
 [os]
 disabled = false
