@@ -206,14 +206,14 @@ time_format = ' %T  %b %d'
 style = 'dimmed yellow'
 
 [aws]
-format = '[$symbol$profile(\($region\))]($style) '
-style = "bold yellow"
-symbol = "∀⍵₷☁️☁️"
+# format = '[$symbol$profile(\($region\))]($style) '
+# style = "bold yellow"
+# symbol = "∀⍵₷☁️☁️"
 disabled = false
 force_display = true
-[aws.region_aliases]
-ap-southeast-2 = "au"
-us-east-1 = "va"
+# [aws.region_aliases]
+# ap-southeast-2 = "au"
+# us-east-1 = "va"
 
 [character]
 success_symbol = "[❯](bold green)"
