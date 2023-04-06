@@ -1,6 +1,5 @@
 format = """
 $directory\
-$username\
 $shlvl\
 $singularity\
 $kubernetes\
@@ -71,6 +70,7 @@ $crystal\
 $custom\
 $sudo\
 $shell\
+$username\
 $hostname\
 $localip\
 $cmd_duration\
