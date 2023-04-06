@@ -89,6 +89,7 @@ $character"""
 [fill]
 symbol = ' '
 # style = 'bold green'
+disabled = true
 
 [os]
 disabled = false
@@ -123,6 +124,7 @@ disabled = true
 # powershell_indicator = ' '
 # unknown_indicator = 'mystery shell'
 # style = 'cyan bold'
+format = ' [$indicator]($style) '
 disabled = false
 
 [directory]
@@ -185,8 +187,8 @@ format = '([ Added: +$added]($added_style))([ Deleted: -$deleted]($deleted_style
 
 [time]
 disabled = false
-format = ' [$time]($style) '
-time_format = '%T, %b %d'
+format = '[$time]($style) '
+time_format = ' %T %b %d'
 
 [aws]
 format = '[$symbol$profile(\($region\))]($style) '
