@@ -1,6 +1,6 @@
 format = """
 $all $fill $time
-$shell$character
+$os$container$shell$character
 """
 
 
