@@ -130,7 +130,8 @@ disabled = false
 [directory]
 truncation_length = 10
 truncation_symbol = ''
-format = '[ $path]($style)[$read_only]($read_only_style) '
+read_only=''
+format = '[ $path]($style)[$read_only]($read_only_style) '
 
 [conda]
 format = '[$symbol$environment]($style) '
