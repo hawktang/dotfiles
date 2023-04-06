@@ -134,7 +134,7 @@ truncation_length = 10
 truncation_symbol = ''
 read_only='  '
 format = '[]($style)[$read_only]($read_only_style)[ $path]($style) '
-style='white'
+style='bold white'
 
 [conda]
 format = '[$symbol$environment]($style) '
