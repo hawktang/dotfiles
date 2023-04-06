@@ -1,4 +1,13 @@
 format = """
+$username\
+$hostname\
+$localip\
+$cmd_duration\
+$jobs\
+$battery\
+$time\
+$status\
+$line_break\
 $directory\
 $shlvl\
 $singularity\
@@ -70,14 +79,6 @@ $crystal\
 $custom\
 $sudo\
 $shell\
-$username\
-$hostname\
-$localip\
-$cmd_duration\
-$jobs\
-$battery\
-$time\
-$status\
 $line_break\
 $os\
 $container\
