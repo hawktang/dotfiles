@@ -112,7 +112,7 @@ style='dimmed green'
 
 [hostname]
 ssh_symbol = " "
-ssh_only = false
+ssh_only = true
 format='[$ssh_symbol$hostname]($style) '
 style='bold dimmed green'
 disabled = false
