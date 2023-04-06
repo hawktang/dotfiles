@@ -116,8 +116,11 @@ format='[$ssh_symbol$hostname]($style)'
 disabled = true
 
 [shell]
+cmd_indicator=''
+xonsh_indicator=''
+zsh_indicator='@'
 # fish_indicator = ''
-# powershell_indicator = '_'
+powershell_indicator = ''
 # unknown_indicator = 'mystery shell'
 # style = 'cyan bold'
 disabled = false
