@@ -100,13 +100,13 @@ Ubuntu = " "
 Amazon = " "
 
 [username]
-format= '$user'
+format= '$user '
 disabled = false
 show_always = true
 
 [localip]
 ssh_only = false
-format = ' $localipv4 '
+format = '$localipv4 '
 disabled = false
 
 [hostname]
