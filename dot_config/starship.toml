@@ -2,6 +2,7 @@ format = """
 $username\
 $hostname\
 $localip\
+$shell\
 $shlvl\
 $singularity\
 $kubernetes\
@@ -81,7 +82,6 @@ $status\
 $line_break\
 $os\
 $container\
-$shell\
 $character"""
 
 
@@ -116,12 +116,12 @@ format='[$ssh_symbol$hostname]($style)'
 disabled = true
 
 [shell]
-cmd_indicator=' '
-xonsh_indicator='@'
-zsh_indicator='\$'
-bash_indicator='\$'
+# cmd_indicator=' '
+# xonsh_indicator='@'
+# zsh_indicator='\$'
+# bash_indicator='\$'
 # fish_indicator = ' '
-powershell_indicator = ' '
+# powershell_indicator = ' '
 # unknown_indicator = 'mystery shell'
 # style = 'cyan bold'
 disabled = false
