@@ -100,7 +100,7 @@ Ubuntu = " "
 Amazon = " "
 
 [username]
-format= '[ $user]($style) '
+format= '[ $user]($style) '
 disabled = false
 show_always = true
 
@@ -132,7 +132,7 @@ disabled = false
 truncation_length = 10
 truncation_symbol = ''
 read_only='  '
-format = '[]($style)[$read_only]($read_only_style)[ $path]($style) '
+format = '[]($style)[$read_only]($read_only_style)[ $path]($style) '
 
 [conda]
 format = '[$symbol$environment]($style) '
