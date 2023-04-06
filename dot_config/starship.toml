@@ -134,18 +134,19 @@ truncation_length = 10
 truncation_symbol = ''
 read_only='  '
 format = '[]($style)[$read_only]($read_only_style)[ $path]($style) '
+style='white'
 
 [conda]
 format = '[$symbol$environment]($style) '
 symbol=' '
-style='bold purple'
+style='bold cyan'
 ignore_base = false
 
 [python]
 symbol = ' '
 format = '[${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
 detect_extensions=['py','ipynb']
-style='bright-purple'
+style='bright-cyan'
 # pyenv_version_name = true
 
 [nodejs]
