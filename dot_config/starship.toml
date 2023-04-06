@@ -115,6 +115,13 @@ ssh_only = false
 format='[$ssh_symbol$hostname]($style)'
 disabled = true
 
+[shell]
+# fish_indicator = ''
+# powershell_indicator = '_'
+# unknown_indicator = 'mystery shell'
+# style = 'cyan bold'
+disabled = false
+
 [directory]
 truncation_length = 8
 truncation_symbol = '…/'
