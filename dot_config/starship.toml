@@ -145,7 +145,7 @@ ignore_base = false
 symbol = ' '
 format = '[${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
 detect_extensions=['py','ipynb']
-style='purple'
+style='bright purple'
 # pyenv_version_name = true
 
 [nodejs]
