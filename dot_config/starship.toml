@@ -46,6 +46,7 @@ $perl\
 $php\
 $pulumi\
 $purescript\
+$conda\
 $python\
 $raku\
 $rlang\
@@ -60,7 +61,6 @@ $vagrant\
 $zig\
 $buf\
 $nix_shell\
-$conda\
 $meson\
 $spack\
 $memory_usage\
@@ -136,7 +136,7 @@ format = '[]($style)[$read_only]($read_only_style)[ $path]($style) '
 
 [conda]
 format = '[$symbol$environment]($style) '
-symbol=' '
+symbol=' '
 ignore_base = true
 
 [python]
