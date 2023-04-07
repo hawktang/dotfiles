@@ -112,18 +112,18 @@ znap source wfxr/forgit
 
 znap source NullSense/fuzzy-sys
 
-znap function _pyenv pyenv              'eval "$( pyenv init - --no-rehash )"'
-compctl -K    _pyenv pyenv
+# znap function _pyenv pyenv              'eval "$( pyenv init - --no-rehash )"'
+# compctl -K    _pyenv pyenv
 
-znap function _pip_completion pip       'eval "$( pip completion --zsh )"'
-compctl -K    _pip_completion pip
+#  znap function _pip_completion pip       'eval "$( pip completion --zsh )"'
+# compctl -K    _pip_completion pip
 
-znap function _python_argcomplete pipx  'eval "$( register-python-argcomplete pipx  )"'
-complete -o nospace -o default -o bashdefault \
-           -F _python_argcomplete pipx
+# znap function _python_argcomplete pipx  'eval "$( register-python-argcomplete pipx  )"'
+# complete -o nospace -o default -o bashdefault \
+#            -F _python_argcomplete pipx
 
-znap function _pipenv pipenv            'eval "$( pipenv --completion )"'
-compdef       _pipenv pipenv
+# znap function _pipenv pipenv            'eval "$( pipenv --completion )"'
+# compdef       _pipenv pipenv
 
 setopt +o nomatch
 
