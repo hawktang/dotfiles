@@ -70,11 +70,11 @@ $crystal\
 $custom\
 $sudo\
 $fill\
+$cmd_duration\
 $shell\
 $username\
 $hostname\
 $localip\
-$cmd_duration\
 $jobs\
 $battery\
 $time\
