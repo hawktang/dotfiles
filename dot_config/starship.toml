@@ -1,13 +1,4 @@
 format = """
-$username\
-$hostname\
-$localip\
-$cmd_duration\
-$jobs\
-$battery\
-$time\
-$status\
-$line_break\
 $directory\
 $shlvl\
 $singularity\
@@ -78,7 +69,16 @@ $env_var\
 $crystal\
 $custom\
 $sudo\
+$fill\
 $shell\
+$username\
+$hostname\
+$localip\
+$cmd_duration\
+$jobs\
+$battery\
+$time\
+$status\
 $line_break\
 $os\
 $container\
@@ -91,7 +91,7 @@ $character\
 [fill]
 symbol = ' '
 # style = 'bold green'
-disabled = true
+disabled = false
 
 [os]
 disabled = false
