@@ -207,7 +207,7 @@ format = '([ Added: +$added]($added_style))([ Deleted: -$deleted]($deleted_style
 [time]
 disabled = false
 format = '[$time]($style) '
-time_format = ' %T  %b %d'
+time_format = ' %R  %b %d'
 style = 'dimmed yellow'
 
 [aws]
