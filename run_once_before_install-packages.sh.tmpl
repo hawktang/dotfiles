@@ -1,7 +1,5 @@
 #!/bin/bash
-
 brew bundle --no-lock --file=/dev/stdin <<EOF
-# brew "git"
 brew "midnight-commander"
 brew "bat"
 brew "exa"
@@ -18,4 +16,8 @@ brew "byobu"
 brew "zoxide"
 brew "rsync"
 brew "aria2"
+{{ if eq .chezmoi.os "linux" -}}
+{{ else if eq .chezmoi.os "darwin" -}}
+cask "mambaforge"
+{{ end -}}
 EOF
