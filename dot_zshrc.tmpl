@@ -293,6 +293,15 @@ alias fd='fd -HI'
 # alias mc='mc -x'
 # alias mcedit='mcedit -x'
 
+
+if [ -f ~/.credentials.zsh ]; then
+    source ~/.credentials.zsh
+    znap source not-poma/lazyshell
+    bindkey '^g' __lazyshell_complete
+fi
+
+# znap source Tarrasch/zsh-autoenv
+
 {{ if eq .chezmoi.os "darwin" }}
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -307,6 +316,10 @@ else
     fi
 fi
 unset __conda_setup
+
+if [ -f "/opt/homebrew/Caskroom/mambaforge/base/etc/profile.d/mamba.sh" ]; then
+    . "/opt/homebrew/Caskroom/mambaforge/base/etc/profile.d/mamba.sh"
+fi
 # <<< conda initialize <<<
 
 {{ else if eq .chezmoi.os "linux" }}
@@ -334,10 +347,6 @@ fi
 # other operating system
 {{ end }}
 
-if [ -f ~/.credentials.zsh ]; then
-    source ~/.credentials.zsh
-    znap source not-poma/lazyshell
-    bindkey '^g' __lazyshell_complete
-fi
 
-# znap source Tarrasch/zsh-autoenv
+
+
