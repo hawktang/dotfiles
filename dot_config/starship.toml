@@ -146,7 +146,7 @@ repo_root_style='bold purple'
 [conda]
 format = '[$symbol$environment]($style) '
 symbol=' '
-style='bold blue'
+style='bold green'
 ignore_base = false
 
 [python]
