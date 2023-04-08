@@ -1,5 +1,6 @@
 format = """
 $directory\
+$fill\
 $shlvl\
 $singularity\
 $kubernetes\
@@ -69,8 +70,6 @@ $env_var\
 $crystal\
 $custom\
 $sudo\
-$fill\
-$cmd_duration\
 $shell\
 $username\
 $hostname\
@@ -79,6 +78,7 @@ $jobs\
 $battery\
 $time\
 $status\
+$cmd_duration\
 $line_break\
 $os\
 $container\
