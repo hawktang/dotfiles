@@ -130,7 +130,7 @@ disabled = false
 # unknown_indicator = 'mystery shell'
 style = 'grey'
 format = '[ $indicator]($style) '
-disabled = true
+disabled = false
 
 [directory]
 truncation_length = 20
