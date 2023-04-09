@@ -1,4 +1,5 @@
 format = """
+$shell\
 $directory\
 $fill\
 $shlvl\
@@ -70,7 +71,6 @@ $env_var\
 $crystal\
 $custom\
 $sudo\
-$shell\
 $username\
 $hostname\
 $localip\
