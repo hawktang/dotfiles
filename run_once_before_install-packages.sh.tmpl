@@ -39,4 +39,6 @@ brew "rsync"
 brew "aria2"
 cask "mambaforge"
 EOF
+{{ else if eq .chezmoi.os "windows" }}
+scoop update *
 {{ end -}}
