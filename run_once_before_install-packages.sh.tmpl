@@ -1,3 +1,4 @@
+{{ if eq .chezmoi.os "linux" -}}
 #!/bin/bash
 brew bundle --no-lock --file=/dev/stdin <<EOF
 brew "midnight-commander"
@@ -16,8 +17,26 @@ brew "byobu"
 brew "zoxide"
 brew "rsync"
 brew "aria2"
-{{ if eq .chezmoi.os "linux" -}}
-{{ else if eq .chezmoi.os "darwin" -}}
-cask "mambaforge"
-{{ end -}}
 EOF
+{{ else if eq .chezmoi.os "darwin" -}}
+#!/bin/bash
+brew bundle --no-lock --file=/dev/stdin <<EOF
+brew "midnight-commander"
+brew "bat"
+brew "exa"
+brew "fd"
+brew "ripgrep"
+brew "fzf"
+brew "awscli"
+# brew "chezmoi"
+brew "starship"
+brew "tldr"
+brew "duf"
+brew "ncdu"
+brew "byobu"
+brew "zoxide"
+brew "rsync"
+brew "aria2"
+cask "mambaforge"
+EOF
+{{ end -}}
