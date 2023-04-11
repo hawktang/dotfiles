@@ -1,5 +1,6 @@
 format = """
 $shell\
+$conda\
 $directory\
 $fill\
 $shlvl\
@@ -45,7 +46,6 @@ $perl\
 $php\
 $pulumi\
 $purescript\
-$conda\
 $python\
 $raku\
 $rlang\
