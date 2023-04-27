@@ -133,7 +133,7 @@ format = '[ $indicator]($style) '
 disabled = false
 
 [directory]
-truncation_length = 20
+truncation_length = 100
 truncation_symbol = ''
 read_only='  '
 format = '[]($style)[$read_only]($read_only_style)[ $path]($style) '
