@@ -133,8 +133,9 @@ format = '[ $indicator]($style) '
 disabled = false
 
 [directory]
-truncation_length = 1000
-# truncation_symbol = ''
+truncation_length = 20
+truncation_symbol = ''
+truncate_to_repo = fase
 read_only='  '
 format = '[]($style)[$read_only]($read_only_style)[ $path]($style) '
 style='bold yellow' 
