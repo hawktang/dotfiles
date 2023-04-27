@@ -135,7 +135,7 @@ disabled = false
 [directory]
 truncation_length = 20
 truncation_symbol = ''
-truncate_to_repo = fase
+truncate_to_repo = false
 read_only='  '
 format = '[]($style)[$read_only]($read_only_style)[ $path]($style) '
 style='bold yellow' 
