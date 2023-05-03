@@ -85,6 +85,7 @@ $container\
 $character\
 """
 
+command_timeout=3000
 
 # right_format = '''$status$time'''
 
