@@ -8,12 +8,6 @@ $singularity\
 $kubernetes\
 $vcsh\
 $fossil_branch\
-$git_branch\
-$git_commit\
-$git_state\
-$git_metrics\
-$git_status\
-$hg_branch\
 $pijul_channel\
 $docker_context\
 $package\
@@ -74,6 +68,15 @@ $sudo\
 $username\
 $hostname\
 $localip\
+
+
+$git_branch\
+$git_commit\
+$git_state\
+$git_metrics\
+$git_status\
+$hg_branch\
+
 $jobs\
 $battery\
 $time\
@@ -120,6 +123,9 @@ ssh_only = true
 format='[$ssh_symbol$hostname]($style) '
 style='bold dimmed cyan'
 disabled = false
+
+[package]
+format = 'via [🎁 $version](208 bold) '
 
 [shell]
 # cmd_indicator=' '
