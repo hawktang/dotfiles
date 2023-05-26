@@ -16,7 +16,10 @@ export EDITOR="mcedit"
 {{ end }}
 # (brew --prefix)/opt/fzf/install
 znap compile /home/linuxbrew/.linuxbrew/opt/fzf/install --all
-znap compile $(asdf where fzf)/install --all
+znap compile $(asdf where fzf)/shell/key-bindings.zsh
+znap compile $(asdf where fzf)/shell/completion.zsh
+
+
 ##
 # Does your shell feels slow to start? `znap prompt` reduces the time between
 # opening your terminal and seeing your prompt to just 15 - 40 ms!
