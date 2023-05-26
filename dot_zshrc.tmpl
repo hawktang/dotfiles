@@ -61,7 +61,7 @@ znap prompt
 # znap source sorin-ionescu/prezto modules/{environment,history}
 # znap source ohmyzsh/ohmyzsh 'lib/(*~(git|theme-and-appearance).zsh)' plugins/git
 
-# znap eval trapd00r/LS_COLORS "$( whence -a dircolors gdircolors ) -b LS_COLORS"
+znap eval trapd00r/LS_COLORS "$( whence -a dircolors gdircolors ) -b LS_COLORS"
 
 # The cache gets regenerated, too, when the eval command has changed. For
 # example, here we include a variable. So, the cache gets invalidated whenever
@@ -234,7 +234,7 @@ zstyle ':autocomplete:*' widget-style menu-select
 
 zstyle ':completion:*:descriptions' format '[%d]'
 # set list-colors to enable filename colorizing
-zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+# zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 # preview directory's content with exa when completing cd
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'exa -1 --color=always $realpath'
 # switch group using `,` and `.`
