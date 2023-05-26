@@ -1,11 +1,10 @@
 export PATH=/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:/opt/homebrew/bin/:/opt/homebrew/sbin/:$PATH
 # ~/bin:~/.local/bin
-# Download Znap, if it's not there yet.
-[[ -f ~/zsh-nap/zsh-snap/znap.zsh ]] ||
-    git clone --depth 1 -- \
-        https://github.com/marlonrichert/zsh-snap.git ~/zsh-nap/zsh-snap
 
-source ~/zsh-nap/zsh-snap/znap.zsh  # Start Znap
+[[ -r ~/Repos/znap/znap.zsh ]] ||
+    git clone --depth 1 -- \
+        https://github.com/marlonrichert/zsh-snap.git ~/Repos/znap
+source ~/Repos/znap/znap.zsh
 
 {{ if eq .chezmoi.os "darwin" }}
 export EDITOR="mcedit"
