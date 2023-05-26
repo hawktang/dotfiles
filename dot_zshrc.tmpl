@@ -15,9 +15,9 @@ export EDITOR="mcedit"
 # other operating system
 {{ end }}
 # (brew --prefix)/opt/fzf/install
-znap compile /home/linuxbrew/.linuxbrew/opt/fzf/install --all
-znap compile $(asdf where fzf)/shell/key-bindings.zsh
-znap compile $(asdf where fzf)/shell/completion.zsh
+# znap compile /home/linuxbrew/.linuxbrew/opt/fzf/install --all
+znap eval $(asdf where fzf)/shell/key-bindings.zsh
+znap eval $(asdf where fzf)/shell/completion.zsh
 
 
 ##
