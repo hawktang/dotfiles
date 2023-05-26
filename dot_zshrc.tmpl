@@ -16,9 +16,10 @@ export EDITOR="mcedit"
 {{ end }}
 # (brew --prefix)/opt/fzf/install
 # znap compile /home/linuxbrew/.linuxbrew/opt/fzf/install --all
-source $(asdf where fzf)/shell/key-bindings.zsh
-source fzf-completion $(asdf where fzf)/shell/completion.zsh
-
+if command -v asdf >/dev/null; then  
+  source $(asdf where fzf)/shell/key-bindings.zsh
+  source $(asdf where fzf)/shell/completion.zsh
+fi
 
 ##
 # Does your shell feels slow to start? `znap prompt` reduces the time between
