@@ -1,0 +1,25 @@
+{{ if eq .chezmoi.os "linux" "darwin" -}}
+#!/bin/bash
+git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.11.3
+asdf_packages="\
+    chezmoi \
+    starship \
+    awscli \
+    bat \
+    exa \
+    fd \
+    ripgrep \
+    fzf \
+    duf \
+    zoxide \
+    aria2 \
+    poetry \
+    "
+
+for i in $asdf_packages; do \
+        asdf plugin add $i && asdf install $i latest && asdf global $i latest; \
+done
+
+poetry self add poetry-plugin-up
+{{ end -}}
+{{ if eq .chezmoi.os "darwin" -}}

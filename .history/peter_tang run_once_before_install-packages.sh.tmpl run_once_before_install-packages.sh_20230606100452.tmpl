@@ -1,0 +1,5 @@
+{{ if eq .chezmoi.os "linux" "darwin" -}}
+#!/bin/bash
+git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.11.3
+{{ end -}}
+{{ if eq .chezmoi.os "darwin" -}}

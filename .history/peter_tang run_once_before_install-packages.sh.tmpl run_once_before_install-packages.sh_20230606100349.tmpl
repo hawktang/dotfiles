@@ -1,0 +1,26 @@
+{{ if eq .chezmoi.os "linux" "darwin" -}}
+#!/bin/bash
+brew bundle --no-lock --file=/dev/stdin <<EOF
+brew "midnight-commander"
+brew "bat"
+brew "exa"
+brew "fd"
+brew "ripgrep"
+brew "fzf"
+brew "awscli"
+# brew "chezmoi"
+brew "starship"
+brew "tldr"
+brew "duf"
+brew "ncdu"
+brew "byobu"
+brew "zoxide"
+brew "rsync"
+brew "aria2"
+brew "httpie"
+brew "w3m"
+brew "git"
+brew "poetry"
+brew "p7zip"
+{{ end -}}
+{{ if eq .chezmoi.os "darwin" -}}
