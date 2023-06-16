@@ -1,10 +1,10 @@
 export PATH=/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:/opt/homebrew/bin/:/opt/homebrew/sbin/:$PATH
 # ~/bin:~/.local/bin
 
-[[ -r ~/Repos/znap/znap.zsh ]] ||
+[[ -r $HOME/Repos/znap/znap.zsh ]] ||
     git clone --depth 1 -- \
-        https://github.com/marlonrichert/zsh-snap.git ~/Repos/znap
-source ~/Repos/znap/znap.zsh
+        https://github.com/marlonrichert/zsh-snap.git $HOME/Repos/znap
+source $HOME/Repos/znap/znap.zsh
 
 {{ if eq .chezmoi.os "darwin" }}
 export EDITOR="mcedit"
