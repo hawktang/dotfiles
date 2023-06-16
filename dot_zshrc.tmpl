@@ -1,5 +1,4 @@
 export PATH=/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:/opt/homebrew/bin/:/opt/homebrew/sbin/:$PATH
-# ~/bin:~/.local/bin
 
 [[ -r $HOME/Repos/znap/znap.zsh ]] ||
     git clone --depth 1 -- \
@@ -14,61 +13,25 @@ export EDITOR="mcedit"
 {{ else }}
 # other operating system
 {{ end }}
-# (brew --prefix)/opt/fzf/install
-# znap compile /home/linuxbrew/.linuxbrew/opt/fzf/install --all
-# if command -v brew >/dev/null; then
-#   source "$(brew --prefix fzf)/shell/key-bindings.zsh"
-#   source "$(brew --prefix fzf)/shell/completion.zsh"
-# else  
-#   if command -v asdf >/dev/null; then
-#     source "$(asdf where fzf)/shell/key-bindings.zsh"
-#     source "$(asdf where fzf)/shell/completion.zsh"  
-#   fi  
-# fi  
 
+setopt +o nomatch
+setopt auto_cd
+HISTSIZE=10000
+HISTFILE=~/.zsh_history
+SAVEHIST=10000
+HISTDUP=erase
+setopt appendhistory
+setopt sharehistory
+setopt incappendhistory
+# setopt hist_ignore_all_dups
+# setopt hist_save_no_dups
+# setopt hist_ignore_dups
+# setopt hist_find_no_dups
+unsetopt HIST_REDUCE_BLANKS
 
-##
-# Does your shell feels slow to start? `znap prompt` reduces the time between
-# opening your terminal and seeing your prompt to just 15 - 40 ms!
-#
-# znap prompt agnoster/agnoster-zsh-theme
-
-# `znap prompt` also supports Oh-My-Zsh themes. Just make sure you load the
-# required libs first:
-# znap source ohmyzsh/ohmyzsh lib/{git,theme-and-appearance}
-# znap prompt ohmyzsh/ohmyzsh robbyrussell
-
-# Using your own custom prompt? After initializing the prompt, just call
-# `znap prompt` without arguments to get it to show:
-# PS1=$'%(?,%F{g},%F{r})%#%f '
+# znap eval starship 'starship init zsh --print-full-init'
+znap eval starship "$(starship init zsh)"
 # znap prompt
-
-# The same goes for any other kind of custom prompt:
-znap eval starship 'starship init zsh --print-full-init'
-# znap eval starship "$(starship init zsh)"
-znap prompt
-
-# NOTE that `znap prompt` does not work with Powerlevel10k.
-# With that theme, you should use its "instant prompt" feature instead.
-
-
-##
-# Load your plugins with `znap source`.
-#
-
-# znap source marlonrichert/zsh-edit
-
-# ...or to load only those parts of Oh-My-Zsh or Prezto that you really need:
-# znap source sorin-ionescu/prezto modules/{environment,history}
-# znap source ohmyzsh/ohmyzsh 'lib/(*~(git|theme-and-appearance).zsh)' plugins/git
-
-# znap eval trapd00r/LS_COLORS "$( whence -a dircolors gdircolors ) -b LS_COLORS"
-
-# The cache gets regenerated, too, when the eval command has changed. For
-# example, here we include a variable. So, the cache gets invalidated whenever
-# this variable has changed.
-# znap source marlonrichert/zcolors
-# znap eval   marlonrichert/zcolors "zcolors ${(q)LS_COLORS}"
 
 znap source ohmyzsh/ohmyzsh
 
@@ -77,7 +40,7 @@ ZSH="$HOME/Repos/ohmyzsh/ohmyzsh"
 plugins=(
     last-working-dir
     httpie
-    magic-enter
+    # magic-enter
     colored-man-pages
     aliases
     aws
@@ -99,67 +62,15 @@ plugins=(
 )
 source $ZSH/oh-my-zsh.sh
 
-
-
-
-# znap source ohmyzsh/ohmyzsh plugins/magic-enter
-# znap source ohmyzsh/ohmyzsh plugins/colored-man-pages
-# znap source ohmyzsh/ohmyzsh plugins/aliases
-# znap source ohmyzsh/ohmyzsh plugins/aws
-# znap source ohmyzsh/ohmyzsh plugins/fzf
-# znap source ohmyzsh/ohmyzsh plugins/sudo
-# znap source ohmyzsh/ohmyzsh plugins/fd
-# znap source ohmyzsh/ohmyzsh plugins/gh
-# znap source ohmyzsh/ohmyzsh plugins/git
-# znap source ohmyzsh/ohmyzsh plugins/last-working-dir
-# znap source ohmyzsh/ohmyzsh plugins/httpie
-# znap source ohmyzsh/ohmyzsh plugins/kate
-# znap source ohmyzsh/ohmyzsh plugins/extract
-# znap source ohmyzsh/ohmyzsh plugins/docker
-# znap source ohmyzsh/ohmyzsh plugins/thefuck
-
-# znap source MichaelAquilina/zsh-autoswitch-virtualenv
 znap source wfxr/forgitz
 znap source ellie/atuin
 
 znap source NullSense/fuzzy-sys
 
-# znap function _pyenv pyenv              'eval "$( pyenv init - --no-rehash )"'
-# compctl -K    _pyenv pyenv
-
-#  znap function _pip_completion pip       'eval "$( pip completion --zsh )"'
-# compctl -K    _pip_completion pip
-
-# znap function _python_argcomplete pipx  'eval "$( register-python-argcomplete pipx  )"'
-# complete -o nospace -o default -o bashdefault \
-#            -F _python_argcomplete pipx
-
-# znap function _pipenv pipenv            'eval "$( pipenv --completion )"'
-# compdef       _pipenv pipenv
-
-setopt +o nomatch
-
-setopt auto_cd
-HISTSIZE=10000
-HISTFILE=~/.zsh_history
-SAVEHIST=10000
-HISTDUP=erase
-setopt appendhistory
-setopt sharehistory
-setopt incappendhistory
-# setopt hist_ignore_all_dups
-# setopt hist_save_no_dups
-# setopt hist_ignore_dups
-# setopt hist_find_no_dups
-unsetopt HIST_REDUCE_BLANKS
-
-# $(brew --prefix)/opt/fzf/install --all
 export FZF_COMPLETION_TRIGGER='`'
-
-
 export FZF_DEFAULT_COMMAND='fd --type f'
 
-# # Options to fzf command
+# Options to fzf command
 export FZF_COMPLETION_OPTS='--border --info=inline'
 
 export FZF_CTRL_T_OPTS="
@@ -175,24 +86,14 @@ export FZF_CTRL_R_OPTS="
 
 export FZF_ALT_C_OPTS="--preview 'tree -C {}'"
 
-
-
-# # Use fd (https://github.com/sharkdp/fd) instead of the default find
-# # command for listing path candidates.
-# # - The first argument to the function ($1) is the base path to start traversal
-# # - See the source code (completion.{bash,zsh}) for the details.
 _fzf_compgen_path() {
   fd --max-depth 2 --hidden --follow --exclude ".git" . "$1"
 }
 
-# # Use fd to generate the list for directory completion
 _fzf_compgen_dir() {
   fd --max-depth 2 --type d --hidden --follow --exclude ".git" . "$1"
 }
 
-# # Advanced customization of fzf options via _fzf_comprun function
-# # - The first argument to the function is the name of the command.
-# # - You should make sure to pass the rest of the arguments to fzf.
 _fzf_comprun() {
   local command=$1
   shift
@@ -205,29 +106,9 @@ _fzf_comprun() {
   esac
 }
 
-# znap source agkozak/zsh-z
-
 
 {{ if eq .chezmoi.os "darwin" }}
-# zstyle ':completion:*' auto-description 'specify: %d'
-# zstyle ':completion:*' completer _expand _complete _correct _approximate
-# zstyle ':completion:*' format 'Completing %d'
-# zstyle ':completion:*' group-name ''
-# zstyle ':completion:*' menu select=2
-# eval "$(dircolors -b)"
-# zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
-# zstyle ':completion:*' list-colors ''
-# zstyle ':completion:*' list-prompt %SAt %p: Hit TAB for more, or the character to insert%s
-# zstyle ':completion:*' matcher-list '' 'm:{a-z}={A-Z}' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=* l:|=*'
-# zstyle ':completion:*' menu select=long
-# zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
-# zstyle ':completion:*' use-compctl false
-# zstyle ':completion:*' verbose true
-
-# zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
-# zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
-# zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'l:|=* r:|=*'
-znap source zsh-users/zsh-completions
+    znap source zsh-users/zsh-completions
 {{ else if eq .chezmoi.os "linux" }}
 zstyle ':autocomplete:*' fzf-completion yes
 zstyle ':autocomplete:recent-dirs' backend zsh-z
@@ -235,9 +116,6 @@ zstyle ':autocomplete:*' widget-style menu-select
 # znap source marlonrichert/zsh-autocomplete
 
 zstyle ':completion:*:descriptions' format '[%d]'
-# set list-colors to enable filename colorizing
-# zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
-# preview directory's content with exa when completing cd
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'exa -1 --color=always $realpath'
 # switch group using `,` and `.`
 zstyle ':fzf-tab:*' switch-group ',' '.'
@@ -291,9 +169,6 @@ znap source zsh-users/zsh-autosuggestions
 # ZSH_HIGHLIGHT_HIGHLIGHTERS=( main brackets )
 znap source zsh-users/zsh-syntax-highlighting
 
-# bindkey '\e[A' fzf-history-widget
-# bindkey '\eOA' fzf-history-widget
-
 eval "$(zoxide init zsh)"
 
 alias l='exa  --icons --classify  --long --header --group --color auto --color-scale --git --sort=modified --group-directories-first --git-ignore'
@@ -306,14 +181,6 @@ alias fd='fd -HI'
 # alias mc='mc -x'
 # alias mcedit='mcedit -x'
 
-
-if [ -f ~/.credentials.zsh ]; then
-    source ~/.credentials.zsh
-    znap source not-poma/lazyshell
-    bindkey '^g' __lazyshell_complete
-fi
-
-# znap source Tarrasch/zsh-autoenv
 
 {{ if eq .chezmoi.os "darwin" }}
 # >>> conda initialize >>>
