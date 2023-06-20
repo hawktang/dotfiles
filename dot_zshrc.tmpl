@@ -34,6 +34,9 @@ unsetopt HIST_REDUCE_BLANKS
 # znap prompt
 eval "$(starship init zsh)"
 
+mkdir $ZSH_CUSTOM/plugins/pdm
+pdm completion zsh > $ZSH_CUSTOM/plugins/pdm/_pdm
+
 znap source ohmyzsh/ohmyzsh
 
 ZSH="$HOME/Repos/ohmyzsh/ohmyzsh"
