@@ -34,12 +34,14 @@ unsetopt HIST_REDUCE_BLANKS
 # znap prompt
 eval "$(starship init zsh)"
 
-mkdir -p $ZSH_CUSTOM/plugins/pdm
-pdm completion zsh > $ZSH_CUSTOM/plugins/pdm/_pdm
+
 
 znap source ohmyzsh/ohmyzsh
 
 ZSH="$HOME/Repos/ohmyzsh/ohmyzsh"
+
+mkdir -p $ZSH_CUSTOM/plugins/pdm
+pdm completion zsh > $ZSH_CUSTOM/plugins/pdm/_pdm
 
 plugins=(
     last-working-dir
