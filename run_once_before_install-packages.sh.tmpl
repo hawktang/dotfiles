@@ -55,7 +55,7 @@ casks=(
 brew update
 
 brew install ${formulae[@]}
-brew install --cask ${casks[@]}
+brew install --cask ${casks[@]} || true
 
 brew cleanup
 {{ end }}
