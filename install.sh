@@ -17,10 +17,10 @@ command -v chezmoi >/dev/null 2>&1 || \
 
 if [ -d "$HOME/.local/share/chezmoi/.git" ]; then
   echo "🚸  chezmoi already initialized"
-  echo "    Reinitialize with: 'chezmoi init --apply hawktang'"
+  echo "    Reinitialize with: 'chezmoi init --apply hawktang'" &&  && /bin/bash -c "$(chezmoi init --apply hawktang)"
 else
   echo "🚀  Initialize dotfiles with:"
-  echo "    chezmoi init --apply hawktang"
+  echo "    chezmoi init --apply hawktang" &&  && /bin/bash -c "$(chezmoi init --apply hawktang)"
 fi
 
 echo ""
