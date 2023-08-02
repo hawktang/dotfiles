@@ -1,0 +1,61 @@
+{{- if (eq .chezmoi.os "darwin") -}}
+#!/bin/bash
+
+set -eufo pipefail
+
+formulae=(
+  midnight-commander
+  bat
+  exa
+  fd
+  ripgrep
+  fzf
+  starship
+  tldr
+  duf
+  ncdu
+  byobu
+  zoxide
+  rsync
+  aria2
+  httpie
+  w3m
+  git
+  poetry
+  p7zip
+  atuin
+)
+casks=(
+	aerial
+	clipy
+	google-chrome
+	kap
+	iterm2
+	visual-studio-code
+  stats
+)
+
+{{ if .work_device }}
+	formulae+=(
+    awscli
+		docker
+		mitmproxy
+		TomAnthony/brews/itermocil	
+	)
+	casks+=(
+    mambaforge
+    rancher
+		beyond-compare
+		hex-fiend
+		microsoft-teams
+		postman
+	)
+{{ end }}
+
+brew update
+
+brew install ${formulae[@]}
+brew install --cask ${casks[@]}
+
+brew cleanup
+{{ end }}
