@@ -61,4 +61,10 @@ brew tap homebrew/cask-fonts
 brew search '/font-.*-nerd-font/' | awk '{ print $1 }' | xargs -I{} brew install --cask {} || true
 
 brew cleanup
+
+git config --global http."https://git-codecommit.ap-southeast-1.amazonaws.com".sslVerify false
+git config --global credential."https://git-codecommit.ap-southeast-1.amazonaws.com".UseHttpPath true
+git config --global credential."https://git-codecommit.ap-southeast-1.amazonaws.com".helper '!aws --profile default codecommit credential-helper $@'
+git config --global credential."https://git-codecommit.ap-southeast-1.amazonaws.com/v1/repos/ce-cipsearch".helper '!aws --profile ce_cipsearch_devops_devops codecommit credential-helper $@'
+
 {{ end }}
