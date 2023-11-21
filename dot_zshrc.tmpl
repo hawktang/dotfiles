@@ -181,10 +181,14 @@ znap source zsh-users/zsh-syntax-highlighting
 
 eval "$(zoxide init zsh)"
 
-alias l='exa  --icons --classify  --long --header --group --color auto --color-scale --git --sort=modified --group-directories-first --git-ignore'
-alias la='exa  --icons --classify  --long --header --group --color auto --color-scale --git --sort=modified --group-directories-first --all'
-alias ll='exa  --icons --classify  --long --header --group --color auto --color-scale --git --sort=modified --group-directories-first --tree  --level=2 --all'
-alias ls='exa  --icons --classify  --long --header --group --color auto --color-scale --git --git-ignore --git-ignore'
+URxvt*font:    xft:Hack Nerd Font:style=Regular:size=11
+
+alias ls='lsd'
+alias l='ls -l'
+alias la='ls -a'
+alias lla='ls -la'
+alias lt='ls --tree'
+
 alias fd='fd -HI'
 
 # alias nali='~/go/bin/nali'
