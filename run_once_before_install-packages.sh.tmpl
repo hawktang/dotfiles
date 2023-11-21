@@ -6,7 +6,7 @@ set -eufo pipefail
 formulae=(
   midnight-commander
   bat
-  exa
+  lsd
   fd
   ripgrep
   fzf
@@ -24,6 +24,7 @@ formulae=(
   poetry
   p7zip
   atuin
+  awscli
 )
 casks=(
 	aerial
@@ -35,21 +36,21 @@ casks=(
   stats
 )
 
-{{ if .work_device }}
-	formulae+=(
-    awscli
-		docker
-		mitmproxy
-		TomAnthony/brews/itermocil	
-	)
-	casks+=(
-    		mambaforge
-		beyond-compare
-		hex-fiend
-		microsoft-teams
-		postman
-	)
-{{ end }}
+# {{ if .work_device }}
+# 	formulae+=(
+#     		awscli
+# 		docker
+# 		mitmproxy
+# 		TomAnthony/brews/itermocil	
+# 	)
+# 	casks+=(
+#    		mambaforge
+# 		beyond-compare
+# 		hex-fiend
+# 		microsoft-teams
+# 		postman
+#	)
+# {{ end }}
 
 brew update
 
