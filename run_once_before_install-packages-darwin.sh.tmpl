@@ -32,7 +32,7 @@ brew update
 
 brew install ${formulae[@]}
 
-{{- if eq .chezmoi.os "darwin" -}}
+{{ if eq .chezmoi.os "darwin" }}
 
 casks=(
     google-chrome
@@ -43,7 +43,8 @@ casks=(
 )
 
 brew install --cask ${casks[@]} -f
-{{ end -}}
+
+{{ end }}
 
 
 brew tap homebrew/cask-fonts
