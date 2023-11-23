@@ -33,6 +33,7 @@ brew update
 brew install ${formulae[@]}
 
 {{- if (eq .chezmoi.os "darwin") -}}
+
 casks=(
 	aerial
 	google-chrome
@@ -41,6 +42,7 @@ casks=(
   	stats
         secure-pipes
 )
+
 brew install --cask ${casks[@]} -f
 
 {{ end }}
