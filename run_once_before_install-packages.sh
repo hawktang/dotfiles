@@ -32,17 +32,15 @@ brew update
 
 brew install ${formulae[@]}
 
-if [[ $(uname) == "Darwin" ]]; then
-  casks=(
+casks=(
     google-chrome
     iterm2
     visual-studio-code
     stats
     secure-pipes
-  )
+)
 
-  brew install --cask ${casks[@]} -f
-fi
+brew install --cask ${casks[@]} -f
 
 brew tap homebrew/cask-fonts
 brew search '/font-.*-nerd-font/' | awk '{ print $1 }' | xargs -I{} brew install --cask {} || true
