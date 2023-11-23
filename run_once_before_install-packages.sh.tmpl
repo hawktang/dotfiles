@@ -35,11 +35,11 @@ brew install ${formulae[@]}
 {{- if (eq .chezmoi.os "darwin") -}}
 
 casks=(
-	google-chrome
-	iterm2
-	visual-studio-code
-  stats
-  secure-pipes
+google-chrome
+iterm2
+visual-studio-code
+stats
+secure-pipes
 )
 
 brew install --cask ${casks[@]} -f
