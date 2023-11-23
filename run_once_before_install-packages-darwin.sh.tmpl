@@ -32,6 +32,8 @@ brew update
 
 brew install ${formulae[@]}
 
+{{- if eq .chezmoi.os "darwin" -}}
+
 casks=(
     google-chrome
     iterm2
@@ -41,6 +43,8 @@ casks=(
 )
 
 brew install --cask ${casks[@]} -f
+{{ end -}}
+
 
 brew tap homebrew/cask-fonts
 brew search '/font-.*-nerd-font/' | awk '{ print $1 }' | xargs -I{} brew install --cask {} || true
