@@ -20,7 +20,7 @@ if [ -d "$HOME/.local/share/chezmoi/.git" ]; then
   echo "    Reinitialize with: 'chezmoi init --apply hawktang'" &&  && /bin/bash -c "$(chezmoi init --apply hawktang)"
 else
   echo "🚀  Initialize dotfiles with:"
-  echo "    chezmoi init --apply hawktang" &&  && /bin/bash -c "$(chezmoi init --apply hawktang)"
+  /bin/bash -c "$(chezmoi init --apply hawktang)"
 fi
 
 echo ""
