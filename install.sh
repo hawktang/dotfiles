@@ -14,12 +14,6 @@ command -v brew >/dev/null 2>&1 || \
 # Install chezmoi
 command -v chezmoi >/dev/null 2>&1 || \
   (echo '👊  Installing chezmoi' && brew install chezmoi)
-
-if [ -d "$HOME/.local/share/chezmoi/.git" ]; then
-  /bin/bash -c "$(chezmoi init --apply hawktang)"
-else
-  /bin/bash -c "$(chezmoi init --apply hawktang)"
-fi
-
+/bin/bash -c "$(chezmoi init --apply hawktang)"
 echo ""
 echo "Done."
