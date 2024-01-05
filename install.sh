@@ -16,10 +16,8 @@ command -v chezmoi >/dev/null 2>&1 || \
   (echo '👊  Installing chezmoi' && brew install chezmoi)
 
 if [ -d "$HOME/.local/share/chezmoi/.git" ]; then
-  echo "🚸  chezmoi already initialized"
   /bin/bash -c "$(chezmoi init --apply hawktang)"
 else
-  echo "🚀  Initialize dotfiles with:"
   /bin/bash -c "$(chezmoi init --apply hawktang)"
 fi
 
