@@ -195,7 +195,7 @@ alias fd='fd -HI'
 
 
 {{ if eq .chezmoi.os "darwin" }}
-export MAMBA_ROOT_PREFIX=$HOME/micromamba
+
 # !! Contents within this block are managed by 'mamba init' !!
 export MAMBA_EXE='/opt/homebrew/opt/micromamba/bin/micromamba';
 export MAMBA_ROOT_PREFIX='$HOME/micromamba';
@@ -209,10 +209,6 @@ unset __mamba_setup
 # <<< mamba initialize <<<
 
 {{ else if eq .chezmoi.os "linux" }}
-
-export MAMBA_ROOT_PREFIX=/mnt/ssd/$USER/.cache
-
-# <<< mamba initialize <<<
 
 {{ else }}
 # other operating system
