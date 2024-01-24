@@ -185,7 +185,6 @@ alias l='ls -l'
 alias la='ls -a'
 alias lla='ls -la'
 alias lt='ls --tree'
-# alias conda='micromamba'
 
 alias fd='fd -HI'
 
@@ -198,7 +197,7 @@ alias fd='fd -HI'
 {{ if eq .chezmoi.os "darwin" }}
 
 
-export MAMBA_ROOT_PREFIX=$HOME/$USER/micromamba
+# export MAMBA_ROOT_PREFIX=$HOME/$USER/micromamba
 # !! Contents within this block are managed by 'mamba init' !!
 export MAMBA_EXE='/opt/homebrew/opt/micromamba/bin/micromamba';
 export MAMBA_ROOT_PREFIX='S/Users/hawktang/micromamba';
@@ -230,6 +229,8 @@ unset __mamba_setup
 {{ else }}
 # other operating system
 {{ end }}
+alias conda='micromamba'
+
 
 
 
