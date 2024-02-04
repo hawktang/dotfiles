@@ -13,6 +13,7 @@ export EDITOR="mcedit"
 # other operating system
 {{ end }}
 
+
 setopt +o nomatch
 setopt auto_cd
 HISTSIZE=10000
@@ -27,6 +28,8 @@ setopt incappendhistory
 # setopt hist_ignore_dups
 # setopt hist_find_no_dups
 unsetopt HIST_REDUCE_BLANKS
+
+ZSH_DISABLE_COMPFIX=ture
 
 # znap eval starship 'starship init zsh --print-full-init'
 # znap eval starship "$(starship init zsh)"
