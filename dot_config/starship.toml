@@ -135,7 +135,7 @@ format = 'via [🎁 $version](208 bold) '
 # fish_indicator = '󰈺 '
 # powershell_indicator = ' '
 # unknown_indicator = 'mystery shell'
-format = '[ $indicator]($style) '
+format = '[ $indicator]($style) '
 style = 'dimmed cyan'
 disabled = false
 
@@ -234,8 +234,6 @@ disabled = true
 format = 'on [$symbol]($style) '
 symbol = '️[ ](blue)'
 # style='bold blue'
-[gcloud.region_aliases]
-asia-southeast1 = 'sg'
 
 [character]
 success_symbol = "[❯](bold green)"
