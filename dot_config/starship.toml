@@ -132,12 +132,12 @@ format = 'via [🎁 $version](208 bold) '
 # xonsh_indicator='@'
 # zsh_indicator='\$'
 # bash_indicator='\$'
-# fish_indicator = ' '
+# fish_indicator = '󰈺 '
 # powershell_indicator = ' '
 # unknown_indicator = 'mystery shell'
-style = 'dimmed cyan'
 format = '[ $indicator]($style) '
-disabled = true
+style = 'dimmed cyan'
+disabled = false
 
 [directory]
 truncation_length = 20
@@ -230,6 +230,7 @@ us-east-1 = 'va'
 CompanyGroupFrobozzOnCallAccess = 'Frobozz'
 
 [gcloud]
+disabled = true
 format = 'on [$symbol]($style) '
 symbol = '️[ ](blue)'
 # style='bold blue'
