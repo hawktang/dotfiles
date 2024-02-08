@@ -230,6 +230,7 @@ us-east-1 = 'va'
 CompanyGroupFrobozzOnCallAccess = 'Frobozz'
 
 [gcloud]
+format = 'on [$symbol]($style) '
 symbol = '️[ ](blue)'
 # style='bold blue'
 [gcloud.region_aliases]
