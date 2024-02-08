@@ -135,7 +135,7 @@ format = 'via [🎁 $version](208 bold) '
 # fish_indicator = '󰈺 '
 # powershell_indicator = ' '
 # unknown_indicator = 'mystery shell'
-format = '[ $indicator]($style) '
+format = '[$indicator]($style) '
 style = 'dimmed cyan'
 disabled = false
 
