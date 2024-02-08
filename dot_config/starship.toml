@@ -219,14 +219,14 @@ time_format = ' %R  %b %d'
 style = 'dimmed yellow'
 
 [aws]
-# format = '[$symbol$profile(\($region\))]($style) '
-# style = "bold yellow"
-# symbol = "∀⍵₷☁️☁️"
-disabled = false
-force_display = false
-# [aws.region_aliases]
-# ap-southeast-2 = "au"
-# us-east-1 = "va"
+format = 'on [$symbol($profile )(\($region\) )]($style)'
+style = 'bold blue'
+symbol = '🅰 '
+[aws.region_aliases]
+ap-southeast-1 = 'sg'
+us-east-1 = 'va'
+[aws.profile_aliases]
+CompanyGroupFrobozzOnCallAccess = 'Frobozz'
 
 [character]
 success_symbol = "[❯](bold green)"
