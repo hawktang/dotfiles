@@ -137,7 +137,7 @@ format = 'via [🎁 $version](208 bold) '
 # unknown_indicator = 'mystery shell'
 style = 'dimmed cyan'
 format = '[ $indicator]($style) '
-disabled = false
+disabled = true
 
 [directory]
 truncation_length = 20
