@@ -230,7 +230,7 @@ us-east-1 = 'va'
 CompanyGroupFrobozzOnCallAccess = 'Frobozz'
 
 [gcloud]
-symbol = '️🇬️ '
+symbol = '️ '
 [gcloud.region_aliases]
 ap-southeast-1 = 'sg'
 asia-northeast1 = 'an1'
