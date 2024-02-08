@@ -219,6 +219,7 @@ time_format = ' %R  %b %d'
 style = 'dimmed yellow'
 
 [aws]
+disabled = true
 format = 'on [$symbol($profile )(\($region\) )]($style)'
 style = 'bold blue'
 symbol = '🅰 '
@@ -227,6 +228,12 @@ ap-southeast-1 = 'sg'
 us-east-1 = 'va'
 [aws.profile_aliases]
 CompanyGroupFrobozzOnCallAccess = 'Frobozz'
+
+[gcloud]
+symbol = '️🇬️ '
+[gcloud.region_aliases]
+ap-southeast-1 = 'sg'
+asia-northeast1 = 'an1'
 
 [character]
 success_symbol = "[❯](bold green)"
