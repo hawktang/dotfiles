@@ -5,6 +5,8 @@ alias ls='lsd'
 alias l='lsd -l'
 alias ll='lsd -lh'
 
+alias conda='micromamba'
+
 # >>> mamba initialize >>>
 # !! Contents within this block are managed by 'mamba init' !!
 set -gx MAMBA_EXE "/opt/homebrew/bin/micromamba"
