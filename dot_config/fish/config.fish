@@ -1,6 +1,10 @@
 if status is-interactive
     # Commands to run in interactive sessions can go here
 end
+
+export PATH=/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:/opt/homebrew/bin/:/opt/homebrew/sbin/:$PATH
+
+
 alias ls='lsd'
 alias l='lsd -l'
 alias ll='lsd -lh'
