@@ -2,7 +2,7 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
-fish_add_path "/opt/homebrew/bin/"
+set PATH /Users/hawktang/micromamba/condabin /home/linuxbrew/.linuxbrew/bin /home/linuxbrew/.linuxbrew/sbin /opt/homebrew/bin/ /opt/homebrew/sbin/ /opt/homebrew/bin /opt/homebrew/sbin /usr/local/bin /System/Cryptexes/App/usr/bin /usr/bin /bin /usr/sbin /sbin /var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin /var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin /var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin /opt/X11/bin /Library/TeX/texbin /Users/hawktang/.fig/bin /Users/hawktang/.local/bin
 
 alias ls='lsd'
 alias l='lsd -l'
