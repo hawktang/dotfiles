@@ -2,7 +2,7 @@ format = """
 $shell\
 $conda\
 $directory\
-
+\n
 $fill\
 $shlvl\
 $singularity\
@@ -90,7 +90,7 @@ $character\
 """
 
 command_timeout=3000
-add_newline = false
+#add_newline = false
 # right_format = '''$status$time'''
 
 [fill]
