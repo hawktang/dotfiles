@@ -3,7 +3,7 @@ format = """
 $conda\
 $python\
 $directory\
-\n
+
 $fill\
 $shell\
 $shlvl\
