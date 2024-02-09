@@ -2,7 +2,7 @@ format = """
 $shell\
 $conda\
 $directory\
-\n
+
 $fill\
 $shlvl\
 $singularity\
