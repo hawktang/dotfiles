@@ -26,6 +26,8 @@ set PATH \
 /Users/hawktang/.fig/bin \
 /Users/hawktang/.local/bin
 
+fish_config theme choose "Tomorrow Night"
+
 #$PATH
 
 alias ls='lsd'
