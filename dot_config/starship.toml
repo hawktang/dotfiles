@@ -1,9 +1,11 @@
 format = """
-$shell\
+
 $conda\
+$python\
 $directory\
 \n
 $fill\
+$shell\
 $shlvl\
 $singularity\
 $kubernetes\
@@ -41,7 +43,7 @@ $perl\
 $php\
 $pulumi\
 $purescript\
-$python\
+
 $raku\
 $rlang\
 $red\
