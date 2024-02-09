@@ -90,7 +90,7 @@ $character\
 """
 
 command_timeout=3000
-
+add_newline = false
 # right_format = '''$status$time'''
 
 [fill]
