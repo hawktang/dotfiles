@@ -3,7 +3,7 @@ format = """
 $conda\
 $python\
 $directory\
-
+$line_break\
 $fill\
 $shell\
 $shlvl\
@@ -85,7 +85,7 @@ $battery\
 $time\
 $status\
 $cmd_duration\
-$line_break\
+
 $os\
 $container\
 $character\
@@ -241,3 +241,6 @@ symbol = '️[ ](blue)'
 [character]
 success_symbol = "[❯](bold green)"
 error_symbol = "[✖](bold red)"
+
+[line_break]
+disabled = False
