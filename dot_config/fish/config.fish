@@ -12,19 +12,7 @@ set PATH \
 /opt/homebrew/sbin/ \
 /opt/homebrew/bin \
 /opt/homebrew/sbin \
-/usr/local/bin \
-/System/Cryptexes/App/usr/bin \
-/usr/bin \
-/bin \
-/usr/sbin \
-/sbin \
-/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin \
-/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin \
-/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin \
-/opt/X11/bin \
-/Library/TeX/texbin \
-/Users/hawktang/.fig/bin \
-/Users/hawktang/.local/bin
+$PATH
 
 fish_config theme choose "Tomorrow Night"
 
