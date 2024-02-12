@@ -31,8 +31,8 @@ fish_config theme choose "Tomorrow Night"
 #$PATH
 
 alias ls='lsd'
-alias l='lsd -l'
-alias ll='lsd -lh'
+alias l='lsd --long --sort time --reverse'
+alias ll='lsd --long --tree'
 
 alias conda='micromamba'
 
