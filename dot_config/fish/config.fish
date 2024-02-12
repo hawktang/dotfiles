@@ -45,3 +45,5 @@ $MAMBA_EXE shell hook --shell fish --root-prefix $MAMBA_ROOT_PREFIX | source
 
 atuin init fish | source
 starship init fish | source
+
+fisher update
