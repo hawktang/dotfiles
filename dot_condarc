@@ -1,2 +1,7 @@
 channels: [conda-forge]
-changeps1: false
+changeps1: False
+auto_update_conda: True
+ssl_verify: False
+update_dependencies: True
+envs_dirs:
+  - /Users/hawktang/micromamba/envs
