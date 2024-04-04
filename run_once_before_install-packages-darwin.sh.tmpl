@@ -22,7 +22,6 @@ formulae=(
   httpie
   w3m
   git
-  poetry
   p7zip
   atuin
   awscli
@@ -35,19 +34,19 @@ brew update
 
 brew install ${formulae[@]}
 
-{{ if eq .chezmoi.os "darwin" }}
+# {{ if eq .chezmoi.os "darwin" }}
 
-casks=(
-    google-chrome
-    iterm2
-    visual-studio-code
-    stats
-    secure-pipes
-)
+# casks=(
+    # google-chrome
+    # iterm2
+    # visual-studio-code
+    # stats
+    # secure-pipes
+# )
 
-brew install --cask ${casks[@]}
+# brew install --cask ${casks[@]}
 
-{{ end }}
+# {{ end }}
 
 
 # brew tap homebrew/cask-fonts
