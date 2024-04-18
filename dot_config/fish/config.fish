@@ -5,7 +5,6 @@ end
 # fisher update 
 
 set PATH \
-/Users/hawktang/micromamba/condabin \
 /home/linuxbrew/.linuxbrew/bin \
 /home/linuxbrew/.linuxbrew/sbin \
 /opt/homebrew/bin/ \
