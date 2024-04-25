@@ -19,7 +19,7 @@ alias ls='lsd'
 alias l='lsd --long --sort time --reverse'
 alias ll='lsd --long --tree'
 
-# alias conda='micromamba'
+alias conda='micromamba'
 
 # >>> mamba initialize >>>
 # !! Contents within this block are managed by 'mamba init' !!
