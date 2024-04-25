@@ -1,8 +1,8 @@
 if status is-interactive
     # Commands to run in interactive sessions can go here
 end
-curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
-fisher update 
+# curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
+# fisher update 
 
 set PATH \
 /home/linuxbrew/.linuxbrew/bin \
