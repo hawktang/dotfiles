@@ -138,7 +138,7 @@ format = 'via [🎁 $version](208 bold) '
 [shell]
 # cmd_indicator=' '
 # xonsh_indicator='@'
-# zsh_indicator='\$'
+zsh_indicator='󰬡'
 # bash_indicator='\$'
 fish_indicator = '󰻳'
 # powershell_indicator = ' '
