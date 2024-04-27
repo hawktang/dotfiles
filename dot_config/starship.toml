@@ -1,11 +1,15 @@
 format = """
-
+$os\
+$container\
+$shell\
 $conda\
 $python\
 $directory\
+
 $line_break\
 $fill\
-$shell\
+
+
 $shlvl\
 $singularity\
 $kubernetes\
@@ -43,7 +47,6 @@ $perl\
 $php\
 $pulumi\
 $purescript\
-
 $raku\
 $rlang\
 $red\
@@ -71,23 +74,24 @@ $sudo\
 $username\
 $hostname\
 $localip\
-
-
 $git_branch\
 $git_commit\
 $git_state\
 $git_metrics\
 $git_status\
 $hg_branch\
-
 $jobs\
 $battery\
 $time\
 $status\
 $cmd_duration\
+
+
 $line_break\
-$os\
-$container\
+
+
+
+
 $character\
 """
 
