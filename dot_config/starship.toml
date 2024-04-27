@@ -104,6 +104,11 @@ symbol = ' '
 disabled = false
 
 [os]
+
+format = '[$symbol]($style)'
+
+style='bright-white'
+
 disabled = false
 
 [os.symbols]
