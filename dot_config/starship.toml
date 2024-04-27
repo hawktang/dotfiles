@@ -138,7 +138,7 @@ format = 'via [🎁 $version](208 bold) '
 [shell]
 # cmd_indicator=' '
 # xonsh_indicator='@'
-zsh_indicator='󰬡'
+zsh_indicator='󰰷'
 # bash_indicator='\$'
 fish_indicator = '󰻳'
 # powershell_indicator = ' '
@@ -156,7 +156,7 @@ format = '[$read_only]($read_only_style)[ $path]($style) '
 style='bold yellow' 
 repo_root_format='[$before_root_path]($before_repo_root_style)[$repo_root]($repo_root_style)[$path]($style)[$read_only]($read_only_style) '
 # fish_style_pwd_dir_length=3
-home_symbol = ' '
+home_symbol = '~'
 repo_root_style='bold purple' 
 
 [conda]
