@@ -112,7 +112,7 @@ Ubuntu = " "
 Amazon = " "
 
 [username]
-format= '[ $user]($style) '
+format= '[$user]($style) '
 disabled = false
 show_always = true
 style_user = 'white'
