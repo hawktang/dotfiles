@@ -8,9 +8,8 @@ $directory\
 $line_break\
 $fill\
 
-
-$username\
 $sudo\
+$username\
 $shlvl\
 $singularity\
 $kubernetes\
