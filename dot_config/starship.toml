@@ -3,7 +3,6 @@ $os\
 $container\
 $sudo\
 $username\
-$shell\
 $conda\
 $python\
 $directory\
@@ -91,7 +90,7 @@ $line_break\
 
 
 
-
+$shell\
 $character\
 """
 
@@ -142,7 +141,7 @@ format = 'via [🎁 $version](208 bold) '
 fish_indicator = ''
 # powershell_indicator = ' '
 # unknown_indicator = 'mystery shell'
-format = '[$indicator]($style) '
+format = '[indicator]($style) '
 style = 'dimmed cyan'
 disabled = false
 
