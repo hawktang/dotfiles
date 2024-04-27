@@ -124,18 +124,18 @@ format = '[ $localipv4]($style) '
 disabled = false
 style='dimmed cyan'
 
-[username]
-format= '[ $user]($style) '
-disabled = false
-show_always = true
-style_user = 'purple'
-
 [sudo]
 format = '[$symbol]($style)'
 style = 'bold red'
 symbol = '󰪌 '
 # 👩‍💻
 disabled = false
+
+[username]
+format= '[$user]($style) '
+disabled = false
+show_always = true
+style_user = 'purple'
 
 [hostname]
 ssh_symbol = " "
