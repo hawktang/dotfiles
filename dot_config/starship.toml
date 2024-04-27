@@ -126,7 +126,7 @@ style='dimmed cyan'
 [sudo]
 format = '[$symbol]($style)'
 style = 'purple'
-symbol = '󱑷 '
+symbol = ' '
 # 👩‍💻
 disabled = false
 
