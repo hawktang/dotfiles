@@ -115,7 +115,7 @@ Amazon = " "
 format= '[ $user]($style) '
 disabled = false
 show_always = true
-style_user = 'dimmed white'
+style_user = 'white'
 
 [localip]
 ssh_only = false
@@ -141,7 +141,7 @@ format = 'via [🎁 $version](208 bold) '
 fish_indicator = ''
 # powershell_indicator = ' '
 # unknown_indicator = 'mystery shell'
-format = '[$indicator](bold green) '
+format = '[$indicator](dimmed green) '
 disabled = false
 
 [directory]
