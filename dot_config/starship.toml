@@ -125,8 +125,8 @@ style='dimmed cyan'
 
 [sudo]
 format = '[$symbol]($style)'
-style = 'bold red'
-symbol = '󰪌 '
+style = 'purple'
+symbol = '󱑷 '
 # 👩‍💻
 disabled = false
 
@@ -134,7 +134,7 @@ disabled = false
 format= '[$user]($style) '
 disabled = false
 show_always = true
-style_user = 'purple'
+style_user = 'cyan'
 
 [hostname]
 ssh_symbol = " "
