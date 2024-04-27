@@ -111,17 +111,19 @@ Macos = " "
 Ubuntu = " "
 Amazon = " "
 
-[username]
-format= '[$user]($style) '
-disabled = false
-show_always = true
-style_user = 'white'
+
 
 [localip]
 ssh_only = false
 format = '[ $localipv4]($style) '
 disabled = false
 style='dimmed cyan'
+
+[username]
+format= '[ $user]($style) '
+disabled = false
+show_always = true
+style_user = 'purple'
 
 [hostname]
 ssh_symbol = " "
