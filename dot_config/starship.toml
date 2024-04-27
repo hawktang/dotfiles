@@ -1,6 +1,8 @@
 format = """
 $os\
 $container\
+$sudo\
+$username\
 $shell\
 $conda\
 $python\
@@ -70,8 +72,6 @@ $azure\
 $env_var\
 $crystal\
 $custom\
-$sudo\
-$username\
 $hostname\
 $localip\
 $git_branch\
