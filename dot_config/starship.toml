@@ -125,10 +125,17 @@ disabled = false
 style='dimmed cyan'
 
 [username]
-format= '[ $user]($style) '
+format= '[ $user]($style) '
 disabled = false
 show_always = true
 style_user = 'purple'
+
+[sudo]
+format = '[$symbol]($style)'
+style = 'bold red'
+symbol = '󰪌 '
+# 👩‍💻
+disabled = false
 
 [hostname]
 ssh_symbol = " "
@@ -180,12 +187,7 @@ style='bold bright-blue'
 [nodejs]
 format = '[$symbol($version )]($style)'
 
-[sudo]
-format = '[$symbol]($style)'
-# style = 'bold green'
-symbol = ' '
-# 👩‍💻
-disabled = false
+
 
 [status]
 style = "red"
