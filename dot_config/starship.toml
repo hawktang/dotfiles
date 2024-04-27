@@ -8,8 +8,8 @@ $directory\
 $line_break\
 $fill\
 
-$username\
 $sudo\
+$username\
 $shlvl\
 $singularity\
 $kubernetes\
@@ -175,7 +175,7 @@ style='bold bright-blue'
 format = '[$symbol($version )]($style)'
 
 [sudo]
-# format = '[as $symbol]($style)'
+format = '[$symbol]($style)'
 # style = 'bold green'
 symbol = ' '
 # 👩‍💻
