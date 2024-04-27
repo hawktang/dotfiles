@@ -138,10 +138,11 @@ format = 'via [🎁 $version](208 bold) '
 # xonsh_indicator='@'
 # zsh_indicator='\$'
 # bash_indicator='\$'
-fish_indicator = ''
+fish_indicator = '󰻳'
 # powershell_indicator = ' '
 # unknown_indicator = 'mystery shell'
-format = '[$indicator](dimmed green) '
+format = '[$indicator]($style) '
+style = "bold green"
 disabled = false
 
 [directory]
