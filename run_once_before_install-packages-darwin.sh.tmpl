@@ -38,9 +38,9 @@ formulae=(
   fisher
 )
 
-brew upgrade
+# brew upgrade
 
-brew install ${formulae[@]}
+# brew install ${formulae[@]}
 
 {{ if eq .chezmoi.os "darwin" }}
 
@@ -55,7 +55,7 @@ casks=(
     tabby
 )
 
-brew install --cask ${casks[@]}
+# brew install --cask ${casks[@]}
 
 {{ end }}
 
