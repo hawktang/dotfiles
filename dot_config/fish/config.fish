@@ -50,7 +50,7 @@ zoxide init fish | source
 #	rm -f -- "$tmp"
 # }
 
-if set -q ZELLIJ
-else
-  zellij
-end
+# if set -q ZELLIJ
+# else
+#  zellij
+# end
