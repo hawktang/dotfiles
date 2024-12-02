@@ -37,6 +37,11 @@ function __tabby_working_directory_reporting --on-event fish_prompt
     echo -en "\e]1337;CurrentDir=$PWD\x7"
 end
 
+function ecr_push
+    set ECR "817929577935.dkr.ecr.ap-southeast-1.amazonaws.com/de-mlauto-master-base"
+    docker tag $argv[1] $ECR:$argv[1]; and docker push $ECR:$argv[1]
+end
+
 atuin init fish | source
 starship init fish | source
 zoxide init fish | source
