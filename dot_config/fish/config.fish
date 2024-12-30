@@ -46,6 +46,8 @@ atuin init fish | source
 starship init fish | source
 zoxide init fish | source
 
+alias http="http --verify=no -pb"
+
 # function y() {
 #	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
 #	yazi "$@" --cwd-file="$tmp"
