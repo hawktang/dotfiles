@@ -48,9 +48,9 @@ atuin init fish | source
 starship init fish | source
 zoxide init fish | source
 
-set -gx http_proxy "http://127.0.0.1:6152"
-set -gx https_proxy "http://127.0.0.1:6152"
-set -gx no_proxy "localhost,127.0.0.1,.local,::1,!*.sq.com.sg"
+# set -gx http_proxy "http://127.0.0.1:6152"
+# set -gx https_proxy "http://127.0.0.1:6152"
+# set -gx no_proxy "localhost,127.0.0.1,.local,::1,!*.sq.com.sg"
 
 alias http="http --verify=no -pb"
 
