@@ -20,15 +20,11 @@ alias ll='lsd --long --tree'
 
 alias conda='micromamba'
 
-# >>> mamba initialize >>>
-# !! Contents within this block are managed by 'mamba init' !!
-# set -gx MAMBA_EXE "/opt/homebrew/bin/micromamba"
-# set -gx MAMBA_ROOT_PREFIX "$HOME/micromamba"
-# $MAMBA_EXE shell hook --shell fish | source
-# <<< mamba initialize <<<
-# --root-prefix $MAMBA_ROOT_PREFIX
 set -gx MAMBA_EXE (command -v micromamba)
-micromamba shell hook --shell fish $MAMBA_ROOT_PREFIX
+if not set -q MAMBA_ROOT_PREFIX
+    set -gx MAMBA_ROOT_PREFIX "$HOME/micromamba"
+end
+$MAMBA_EXE shell hook --shell fish --root-prefix $MAMBA_ROOT_PREFIX | source
 
 # function fish_greeting
 #    fastfetch
