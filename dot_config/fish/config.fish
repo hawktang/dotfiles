@@ -14,9 +14,9 @@ $PATH
 
 fish_config theme choose "Tomorrow Night"
 
-git config --global http.sslVerify false
-git config --global credential."https://git-codecommit.ap-southeast-1.amazonaws.com".UseHttpPath true
-git config --global credential."https://git-codecommit.ap-southeast-1.amazonaws.com".helper '!aws --profile default codecommit credential-helper $@'
+# git config --global http.sslVerify false
+# git config --global credential."https://git-codecommit.ap-southeast-1.amazonaws.com".UseHttpPath true
+# git config --global credential."https://git-codecommit.ap-southeast-1.amazonaws.com".helper '!aws --profile default codecommit credential-helper $@'
 
 set -gx MAMBA_EXE (command -v micromamba)
 if not set -q MAMBA_ROOT_PREFIX
