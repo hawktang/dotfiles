@@ -7,8 +7,6 @@ end
 set PATH \
 /home/linuxbrew/.linuxbrew/bin \
 /home/linuxbrew/.linuxbrew/sbin \
-/opt/homebrew/bin/ \
-/opt/homebrew/sbin/ \
 /opt/homebrew/bin \
 /opt/homebrew/sbin \
 $PATH
