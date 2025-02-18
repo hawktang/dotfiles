@@ -9,6 +9,7 @@ set PATH \
 /home/linuxbrew/.linuxbrew/sbin \
 /opt/homebrew/bin \
 /opt/homebrew/sbin \
+$HOME/.local/bin \
 $PATH
 
 fish_config theme choose "Tomorrow Night"
