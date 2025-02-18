@@ -27,7 +27,7 @@ alias conda='micromamba'
 # $MAMBA_EXE shell hook --shell fish | source
 # <<< mamba initialize <<<
 # --root-prefix $MAMBA_ROOT_PREFIX
-
+set -gx MAMBA_EXE (command -v micromamba)
 micromamba shell hook --shell fish $MAMBA_ROOT_PREFIX
 
 # function fish_greeting
