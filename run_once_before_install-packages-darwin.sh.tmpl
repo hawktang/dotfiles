@@ -51,19 +51,20 @@ formulae=(
 
 # brew upgrade
 
-# brew install ${formulae[@]}
+brew install ${formulae[@]}
 
 {{ if eq .chezmoi.os "darwin" }}
 
 casks=(
     # google-chrome
-    iterm2
+    # iterm2
+    ghostty
     # visual-studio-code
     # stats
     # secure-pipes
-    scroll-reverser
+    # scroll-reverser
     font-hack-nerd-font
-    tabby
+    # tabby
 )
 
 # brew install --cask ${casks[@]}
