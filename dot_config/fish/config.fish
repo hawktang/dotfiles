@@ -31,9 +31,9 @@ alias conda='micromamba'
 
 $MAMBA_EXE shell hook --shell fish --root-prefix $MAMBA_ROOT_PREFIX | source
 
-function fish_greeting
-    fastfetch
-end
+# function fish_greeting
+#    fastfetch
+# end
 
 function __tabby_working_directory_reporting --on-event fish_prompt
     echo -en "\e]1337;CurrentDir=$PWD\x7"
