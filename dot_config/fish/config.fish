@@ -14,11 +14,9 @@ $PATH
 
 fish_config theme choose "Tomorrow Night"
 
-alias ls='lsd'
-alias l='lsd --long --sort time --reverse'
-alias ll='lsd --long --tree'
-
-alias conda='micromamba'
+git config --global http.sslVerify false
+git config --global credential."https://git-codecommit.ap-southeast-1.amazonaws.com".UseHttpPath true
+git config --global credential."https://git-codecommit.ap-southeast-1.amazonaws.com".helper '!aws --profile default codecommit credential-helper $@'
 
 set -gx MAMBA_EXE (command -v micromamba)
 if not set -q MAMBA_ROOT_PREFIX
@@ -43,11 +41,18 @@ atuin init fish | source
 starship init fish | source
 zoxide init fish | source
 
+
+
 # set -gx http_proxy "http://127.0.0.1:6152"
 # set -gx https_proxy "http://127.0.0.1:6152"
 # set -gx no_proxy "localhost,127.0.0.1,.local,::1,!*.sq.com.sg"
 
 alias http="http --verify=no -pb"
+alias ls='lsd'
+alias l='lsd --long --sort time --reverse'
+alias ll='lsd --long --tree'
+
+alias conda='micromamba'
 
 # function y() {
 #	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
