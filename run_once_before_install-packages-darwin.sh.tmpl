@@ -49,16 +49,6 @@ formulae=(
   
 )
 
-# brew upgrade
-
-{{ if eq .chezmoi.os "darwin" }}
-/opt/homebrew/bin/brew install ${formulae[@]}
-{{ else }}
-# /home/linuxbrew/.linuxbrew/bin/brew install ${formulae[@]}
-{{ end }}
-
-{{ if eq .chezmoi.os "darwin" }}
-
 casks=(
     # google-chrome
     # iterm2
@@ -71,10 +61,17 @@ casks=(
     # tabby
 )
 
-# /opt/homebrew/bin/brew install --cask ${casks[@]}
+# brew upgrade
 
+{{ $install := promptBool "Do you want to install the tools with brew?" false }}
+{{ if $install }}
+  {{ if eq .chezmoi.os "darwin" }}
+    /opt/homebrew/bin/brew install ${formulae[@]}
+    /opt/homebrew/bin/brew install --cask ${casks[@]}
+  {{ else }}
+    /home/linuxbrew/.linuxbrew/bin/brew install ${formulae[@]}
+  {{ end }}
 {{ end }}
-
 
 # brew tap homebrew/cask-fonts
 # brew search '/font-.*-nerd-font/' | awk '{ print $1 }' | xargs -I{} brew install --cask {} || true
