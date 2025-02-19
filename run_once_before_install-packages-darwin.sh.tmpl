@@ -51,7 +51,11 @@ formulae=(
 
 # brew upgrade
 
-brew install ${formulae[@]}
+{{ if eq .chezmoi.os "darwin" }}
+/opt/homebrew/bin/brew install ${formulae[@]}
+{{ else }}
+/home/linuxbrew/.linuxbrew/bin/brew install ${formulae[@]}
+{{ end }}
 
 {{ if eq .chezmoi.os "darwin" }}
 
@@ -67,7 +71,7 @@ casks=(
     # tabby
 )
 
-# brew install --cask ${casks[@]}
+# /opt/homebrew/bin/brew install --cask ${casks[@]}
 
 {{ end }}
 
