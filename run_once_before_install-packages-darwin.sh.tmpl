@@ -54,7 +54,7 @@ formulae=(
 {{ if eq .chezmoi.os "darwin" }}
 /opt/homebrew/bin/brew install ${formulae[@]}
 {{ else }}
-/home/linuxbrew/.linuxbrew/bin/brew install ${formulae[@]}
+# /home/linuxbrew/.linuxbrew/bin/brew install ${formulae[@]}
 {{ end }}
 
 {{ if eq .chezmoi.os "darwin" }}
