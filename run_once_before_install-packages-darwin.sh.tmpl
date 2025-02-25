@@ -65,12 +65,12 @@ casks=(
 
 # {{ $install := promptBool "Do you want to install the tools with brew?" false }}
 # {{ if $install }}
-  {{ if eq .chezmoi.os "darwin" }}
-    /opt/homebrew/bin/brew install ${formulae[@]}
-    /opt/homebrew/bin/brew install --cask ${casks[@]}
-  {{ else }}
-    /home/linuxbrew/.linuxbrew/bin/brew install ${formulae[@]}
-  {{ end }}
+#  {{ if eq .chezmoi.os "darwin" }}
+#    /opt/homebrew/bin/brew install ${formulae[@]}
+#    /opt/homebrew/bin/brew install --cask ${casks[@]}
+#  {{ else }}
+#     /home/linuxbrew/.linuxbrew/bin/brew install ${formulae[@]}
+#   {{ end }}
 # {{ end }}
 
 # brew tap homebrew/cask-fonts
