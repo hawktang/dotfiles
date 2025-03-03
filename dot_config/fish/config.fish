@@ -33,7 +33,7 @@ function __tabby_working_directory_reporting --on-event fish_prompt
 end
 
 function ecr_push
-    set ECR "817929577935.dkr.ecr.ap-southeast-1.amazonaws.com/de-mlauto-master-base"
+    set ECR "817929577935.dkr.ecr.ap-southeast-1.amazonaws.com/de-kariba-docker"
     docker tag $argv[1] $ECR:$argv[1]; and docker push $ECR:$argv[1]
 end
 
