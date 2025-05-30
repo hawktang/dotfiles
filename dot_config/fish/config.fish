@@ -23,6 +23,7 @@ if not set -q MAMBA_ROOT_PREFIX
     set -gx MAMBA_ROOT_PREFIX "$HOME/micromamba"
 end
 $MAMBA_EXE shell hook --shell fish --root-prefix $MAMBA_ROOT_PREFIX | source
+set -gx GIT_CONFIG_NOSYSTEM 1
 
 # function fish_greeting
 #    fastfetch
@@ -46,6 +47,7 @@ zoxide init fish | source
 # set -gx http_proxy "http://127.0.0.1:6152"
 # set -gx https_proxy "http://127.0.0.1:6152"
 # set -gx no_proxy "localhost,127.0.0.1,.local,::1,!*.sq.com.sg"
+
 
 alias http="http --verify=no -pb"
 alias ls='lsd'
