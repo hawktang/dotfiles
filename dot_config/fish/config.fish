@@ -55,6 +55,11 @@ alias l='lsd --long --sort time --reverse'
 alias ll='lsd --long --tree'
 
 alias conda='micromamba'
+# For Bash/Zsh
+alias zellij='zellij attach --create'
+
+# For Fish
+alias zellij 'zellij attach --create'
 
 # function y() {
 #	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
