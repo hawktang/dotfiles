@@ -68,7 +68,7 @@ casks=(
     /opt/homebrew/bin/brew install ${formulae[@]}
     /opt/homebrew/bin/brew install --cask ${casks[@]}
 {{ else }}
-    /home/linuxbrew/.linuxbrew/bin/brew install ${formulae[@]}
+    # /home/linuxbrew/.linuxbrew/bin/brew install ${formulae[@]}
     sudo usermod -s /home/linuxbrew/.linuxbrew/bin/fish $(whoami)
 {{ end }}
 
