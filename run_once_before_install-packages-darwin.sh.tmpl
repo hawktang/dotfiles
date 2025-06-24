@@ -69,7 +69,7 @@ casks=(
     /opt/homebrew/bin/brew install --cask ${casks[@]}
 {{ else }}
     # /home/linuxbrew/.linuxbrew/bin/brew install ${formulae[@]}
-    sudo usermod -s /home/linuxbrew/.linuxbrew/bin/fish $(whoami)
+    # sudo usermod -s /home/linuxbrew/.linuxbrew/bin/fish $(whoami)
 {{ end }}
 
 # brew tap homebrew/cask-fonts
