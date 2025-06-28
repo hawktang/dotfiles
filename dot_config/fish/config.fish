@@ -41,7 +41,7 @@ end
 atuin init fish | source
 starship init fish | source
 zoxide init fish | source
-
+fzf --fish | source
 
 
 # set -gx http_proxy "http://127.0.0.1:6152"
