@@ -64,13 +64,13 @@ casks=(
 
 # brew upgrade
 
-# {{ if eq .chezmoi.os "darwin" }}
-#    /opt/homebrew/bin/brew install ${formulae[@]}
-#    /opt/homebrew/bin/brew install --cask ${casks[@]}
-# {{ else }}
-#    /home/linuxbrew/.linuxbrew/bin/brew install ${formulae[@]}
-#    sudo usermod -s /home/linuxbrew/.linuxbrew/bin/fish $(whoami)
-# {{ end }}
+{{ if eq .chezmoi.os "darwin" }}
+  /opt/homebrew/bin/brew install ${formulae[@]}
+  /opt/homebrew/bin/brew install --cask ${casks[@]}
+{{ else }}
+  /home/linuxbrew/.linuxbrew/bin/brew install ${formulae[@]}
+  sudo usermod -s /home/linuxbrew/.linuxbrew/bin/fish $(whoami)
+{{ end }}
 
 # brew tap homebrew/cask-fonts
 # brew search '/font-.*-nerd-font/' | awk '{ print $1 }' | xargs -I{} brew install --cask {} || true
