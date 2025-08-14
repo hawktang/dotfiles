@@ -68,8 +68,19 @@ casks=(
   /opt/homebrew/bin/brew install ${formulae[@]}
   /opt/homebrew/bin/brew install --cask ${casks[@]}
 {{ else }}
-  /home/linuxbrew/.linuxbrew/bin/brew install ${formulae[@]}
-  sudo usermod -s /home/linuxbrew/.linuxbrew/bin/fish $(whoami)
+  read -p "Do you want to install Homebrew formulas? [y/N] " confirm
+  if [[ "$confirm" =~ ^[Yy]$ ]]; then
+    /home/linuxbrew/.linuxbrew/bin/brew install "${formulae[@]}"
+  else
+    echo "Skipping Homebrew formula installation."
+  fi
+
+  read -p "Do you want to change your shell to fish? [y/N] " confirm
+  if [[ "$confirm" =~ ^[Yy]$ ]]; then
+    sudo usermod -s /home/linuxbrew/.linuxbrew/bin/fish "$(whoami)"
+  else
+    echo "Skipping shell change."
+  fi
 {{ end }}
 
 # brew tap homebrew/cask-fonts
