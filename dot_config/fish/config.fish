@@ -33,10 +33,10 @@ function __tabby_working_directory_reporting --on-event fish_prompt
     echo -en "\e]1337;CurrentDir=$PWD\x7"
 end
 
-function ecr_push
-    set ECR "817929577935.dkr.ecr.ap-southeast-1.amazonaws.com/de-kariba-docker"
-    docker tag $argv[1] $ECR:$argv[1]; and docker push $ECR:$argv[1]
-end
+# function ecr_push
+#    set ECR "817929577935.dkr.ecr.ap-southeast-1.amazonaws.com/de-kariba-docker"
+#    docker tag $argv[1] $ECR:$argv[1]; and docker push $ECR:$argv[1]
+# end
 
 fzf --fish | source
 atuin init fish | source
@@ -47,8 +47,9 @@ zoxide init fish | source
 
 # set -gx http_proxy "http://127.0.0.1:6152"
 # set -gx https_proxy "http://127.0.0.1:6152"
-set -gx no_proxy "localhost,127.0.0.1,.local,::1,169.254.169.253,169.254.169.254"
-
+# set -gx no_proxy "localhost,127.0.0.1,.local,::1,169.254.169.253,169.254.169.254"
+set -gx no_proxy "10.119.112.43,10.119.114.49,127.0.0.1,localhost,169.254.169.253,169.254.169.254,.s3.ap-southeast-1.amazonaws.com,s3-ap-southeast-1.amazonaws.com,dynamodb.ap-southeast-1.amazonaws.com,.sq.com.sg,logs.ap-sout
+heast-1.amazonaws.com,es.amazonaws.com,kariba-litellm.de.sin.auto2.nonprod.c0.sq.com.sg"
 # 169.254.169.254 is where sia kriscloud get ec2 role.
 # !*.sq.com.sg
 
