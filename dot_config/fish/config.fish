@@ -47,8 +47,8 @@ zoxide init fish | source
 
 # set -gx http_proxy "http://127.0.0.1:6152"
 # set -gx https_proxy "http://127.0.0.1:6152"
-# set -gx no_proxy "localhost,127.0.0.1,.local,::1,169.254.169.253,169.254.169.254"
-set -gx no_proxy "10.119.112.43,10.119.114.49,127.0.0.1,localhost,169.254.169.253,169.254.169.254,.s3.ap-southeast-1.amazonaws.com,s3-ap-southeast-1.amazonaws.com,dynamodb.ap-southeast-1.amazonaws.com,.sq.com.sg,logs.ap-southeast-1.amazonaws.com,es.amazonaws.com,kariba-litellm.de.sin.auto2.nonprod.c0.sq.com.sg"
+set -gx no_proxy "localhost,127.0.0.1,.local,::1,169.254.169.253,169.254.169.254"
+# set -gx no_proxy "api.nonprod.kariba-litellm.de.sin.auto2.nonprod.c0.sq.com.sg,10.119.112.43,10.119.114.49,127.0.0.1,localhost,169.254.169.253,169.254.169.254,.s3.ap-southeast-1.amazonaws.com,s3-ap-southeast-1.amazonaws.com,dynamodb.ap-southeast-1.amazonaws.com,.sq.com.sg,logs.ap-southeast-1.amazonaws.com,es.amazonaws.com"
 # 169.254.169.254 is where sia kriscloud get ec2 role.
 # !*.sq.com.sg
 
