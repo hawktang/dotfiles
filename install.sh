@@ -150,9 +150,22 @@ install_homebrew() {
     fi
   elif [[ "$OS_TYPE" == "linux" ]]; then
     # For Linux
-    [[ -f ~/.linuxbrew/bin/brew ]] && eval "$(~/.linuxbrew/bin/brew shellenv)"
-    [[ -f /home/linuxbrew/.linuxbrew/bin/brew ]] && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-    [[ -f /opt/homebrew/bin/brew ]] && eval "$(/opt/homebrew/bin/brew shellenv)"
+    if [[ -f /home/linuxbrew/.linuxbrew/bin/brew ]]; then
+      eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+      
+      # Add Homebrew to .bashrc for persistent PATH
+      if [[ -f "$HOME/.bashrc" ]]; then
+        if ! grep -q '/home/linuxbrew/.linuxbrew/bin/brew shellenv' "$HOME/.bashrc"; then
+          echo "" >> "$HOME/.bashrc"
+          echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> "$HOME/.bashrc"
+          echo "Added Homebrew to .bashrc for persistent PATH configuration"
+        fi
+      fi
+    elif [[ -f ~/.linuxbrew/bin/brew ]]; then
+      eval "$(~/.linuxbrew/bin/brew shellenv)"
+    elif [[ -f /opt/homebrew/bin/brew ]]; then
+      eval "$(/opt/homebrew/bin/brew shellenv)"
+    fi
   fi
   
   # Verify Homebrew installation
@@ -202,6 +215,10 @@ apply_dotfiles() {
     echo "Warning: No write permission to $HOME"
     exit 1
   fi
+  
+  # Create and set temp directory to avoid permission issues
+  mkdir -p "$HOME/.cache/tmp"
+  export TMPDIR="$HOME/.cache/tmp"
   
   # Initialize and apply chezmoi configuration
   chezmoi init --apply hawktang || {
