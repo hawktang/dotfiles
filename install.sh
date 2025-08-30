@@ -40,9 +40,33 @@ ensure_user_dirs() {
   fi
 }
 
+# Install prerequisites for Amazon Linux 2023
+install_amazon_linux_prerequisites() {
+  echo "Installing prerequisites for Amazon Linux 2023..."
+  
+  # Install Development Tools group
+  sudo dnf groupinstall -y "Development Tools"
+  
+  # Install additional required packages
+  sudo dnf install -y procps-ng curl file git
+  
+  echo "Prerequisites installed successfully."
+}
+
 # Install Homebrew
 install_homebrew() {
   echo '🍺  Installing Homebrew'
+  
+  # Check if running on Amazon Linux 2023 and install prerequisites
+  if [[ "$OS_TYPE" == "linux" ]]; then
+    if [[ -f /etc/os-release ]]; then
+      . /etc/os-release
+      if [[ "$ID" == "amzn" && "$VERSION_ID" == "2023" ]]; then
+        echo "Detected Amazon Linux 2023"
+        install_amazon_linux_prerequisites
+      fi
+    fi
+  fi
   
   # Check for necessary tools
   if ! command -v curl >/dev/null 2>&1; then
