@@ -95,13 +95,29 @@ install_amazon_linux_prerequisites() {
 install_homebrew() {
   echo '🍺  Installing Homebrew'
   
-  # Check if running on Amazon Linux 2023 and install prerequisites
+  # Configure passwordless sudo FIRST for any Linux system to avoid prompts during Homebrew installation
   if [[ "$OS_TYPE" == "linux" ]]; then
+    echo "Configuring passwordless sudo for Homebrew installation..."
+    configure_passwordless_sudo
+    
+    # Then check for Amazon Linux 2023 specific prerequisites
     if [[ -f /etc/os-release ]]; then
       . /etc/os-release
       if [[ "$ID" == "amzn" && "$VERSION_ID" == "2023" ]]; then
         echo "Detected Amazon Linux 2023"
-        install_amazon_linux_prerequisites
+        # Install prerequisites but skip passwordless sudo (already done above)
+        echo "Installing prerequisites for Amazon Linux 2023..."
+        
+        # Install Development Tools group
+        sudo dnf groupinstall -y "Development Tools"
+        
+        # Install additional required packages
+        sudo dnf install -y procps-ng curl file git
+        
+        # Configure Git for AWS CodeCommit
+        configure_aws_codecommit_git
+        
+        echo "Prerequisites installed successfully."
       fi
     fi
   fi
@@ -111,6 +127,9 @@ install_homebrew() {
     echo "Error: curl is required but not installed."
     exit 1
   fi
+  
+  # Set NONINTERACTIVE mode for Homebrew installer to avoid prompts
+  export NONINTERACTIVE=1
   
   # First try the official installer
   echo "Attempting standard Homebrew installation..."
