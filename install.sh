@@ -56,6 +56,22 @@ configure_passwordless_sudo() {
   echo "Passwordless sudo configured successfully."
 }
 
+# Configure Git for AWS CodeCommit
+configure_aws_codecommit_git() {
+  echo "Configuring Git for AWS CodeCommit..."
+  
+  # Disable SSL verification for CodeCommit
+  git config --global http."https://git-codecommit.ap-southeast-1.amazonaws.com/".sslVerify false
+  
+  # Enable UseHttpPath for CodeCommit credentials
+  git config --global credential."https://git-codecommit.ap-southeast-1.amazonaws.com".UseHttpPath true
+  
+  # Set up AWS CodeCommit credential helper
+  git config --global credential."https://git-codecommit.ap-southeast-1.amazonaws.com".helper '!aws --profile default codecommit credential-helper $@'
+  
+  echo "Git configured for AWS CodeCommit successfully."
+}
+
 # Install prerequisites for Amazon Linux 2023
 install_amazon_linux_prerequisites() {
   echo "Installing prerequisites for Amazon Linux 2023..."
@@ -68,6 +84,9 @@ install_amazon_linux_prerequisites() {
   
   # Install additional required packages
   sudo dnf install -y procps-ng curl file git
+  
+  # Configure Git for AWS CodeCommit
+  configure_aws_codecommit_git
   
   echo "Prerequisites installed successfully."
 }
