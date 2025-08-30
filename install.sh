@@ -40,9 +40,28 @@ ensure_user_dirs() {
   fi
 }
 
+# Configure passwordless sudo for current user
+configure_passwordless_sudo() {
+  local username=$(whoami)
+  local sudoers_file="/etc/sudoers.d/99-nopasswd-${username}"
+  
+  echo "Configuring passwordless sudo for user: ${username}"
+  
+  # Create sudoers drop-in file with proper syntax validation
+  echo "${username} ALL=(ALL) NOPASSWD:ALL" | sudo tee "${sudoers_file}" > /dev/null
+  
+  # Set correct permissions for sudoers file
+  sudo chmod 440 "${sudoers_file}"
+  
+  echo "Passwordless sudo configured successfully."
+}
+
 # Install prerequisites for Amazon Linux 2023
 install_amazon_linux_prerequisites() {
   echo "Installing prerequisites for Amazon Linux 2023..."
+  
+  # Configure passwordless sudo first to avoid password prompts
+  configure_passwordless_sudo
   
   # Install Development Tools group
   sudo dnf groupinstall -y "Development Tools"
