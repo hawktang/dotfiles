@@ -14,6 +14,42 @@ $PATH
 
 fish_config theme choose "Tomorrow Night"
 
+# Check if running on Amazon Linux 2023 and set proxy
+if test -f /etc/os-release
+    set os_info (cat /etc/os-release)
+    if string match -q "*ID=amzn*" $os_info; and string match -q "*VERSION_ID=\"2023\"*" $os_info
+        # Set proxy for Amazon Linux 2023
+        set -gx http_proxy 'http://proxy.sin.services.nonprod.c0.sq.com.sg:3128'
+        set -gx https_proxy 'http://proxy.sin.services.nonprod.c0.sq.com.sg:3128'
+        set -gx HTTP_PROXY 'http://proxy.sin.services.nonprod.c0.sq.com.sg:3128'
+        set -gx HTTPS_PROXY 'http://proxy.sin.services.nonprod.c0.sq.com.sg:3128'
+        
+        # Set no_proxy for both lowercase and uppercase
+        set -gx no_proxy "api.nonprod.kariba-litellm.de.sin.auto2.nonprod.c0.sq.com.sg,10.119.112.43,10.119.114.49,127.0.0.1,localhost,169.254.169.253,169.254.169.254,.s3.ap-southeast-1.amazonaws.com,s3-ap-southeast-1.amazonaws.com,dynamodb.ap-southeast-1.amazonaws.com,.sq.com.sg,logs.ap-southeast-1.amazonaws.com,es.amazonaws.com"
+        set -gx NO_PROXY "api.nonprod.kariba-litellm.de.sin.auto2.nonprod.c0.sq.com.sg,10.119.112.43,10.119.114.49,127.0.0.1,localhost,169.254.169.253,169.254.169.254,.s3.ap-southeast-1.amazonaws.com,s3-ap-southeast-1.amazonaws.com,dynamodb.ap-southeast-1.amazonaws.com,.sq.com.sg,logs.ap-southeast-1.amazonaws.com,es.amazonaws.com"
+        
+        # Enable Vertex AI integration
+        set -gx CLAUDE_CODE_USE_VERTEX 1
+        set -gx CLOUD_ML_REGION global
+        set -gx ANTHROPIC_VERTEX_PROJECT_ID sia-data-team
+        # Optional: Disable prompt caching if needed
+        set -gx DISABLE_PROMPT_CACHING 1
+        
+        # When CLOUD_ML_REGION=global, override region for unsupported models
+        set -gx VERTEX_REGION_CLAUDE_3_5_HAIKU us-east5
+        
+        # Optional: Override regions for other specific models
+        set -gx VERTEX_REGION_CLAUDE_3_5_SONNET us-east5
+        set -gx VERTEX_REGION_CLAUDE_3_7_SONNET us-east5
+        set -gx VERTEX_REGION_CLAUDE_4_0_OPUS europe-west1
+        set -gx VERTEX_REGION_CLAUDE_4_0_SONNET us-east5
+        set -gx VERTEX_REGION_CLAUDE_4_1_OPUS europe-west1
+        
+        # Set Google Application Credentials
+        set -gx GOOGLE_APPLICATION_CREDENTIALS "$HOME/gcloud.json"
+    end
+end
+
 # git config --global http.sslVerify false
 # git config --global credential."https://git-codecommit.ap-southeast-1.amazonaws.com".UseHttpPath true
 # git config --global credential."https://git-codecommit.ap-southeast-1.amazonaws.com".helper '!aws --profile default codecommit credential-helper $@'
