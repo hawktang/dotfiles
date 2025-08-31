@@ -62,24 +62,67 @@ casks=(
     # tabby
 )
 
+linux_casks=(
+    claude-code
+    # Add more Linux-specific casks here
+)
+
+
+
 # brew upgrade
 
 {{ if eq .chezmoi.os "darwin" }}
   /opt/homebrew/bin/brew install ${formulae[@]}
   /opt/homebrew/bin/brew install --cask ${casks[@]}
 {{ else }}
-  read -p "Do you want to install Homebrew formulas? [y/N] " confirm
-  if [[ "$confirm" =~ ^[Yy]$ ]]; then
-    /home/linuxbrew/.linuxbrew/bin/brew install "${formulae[@]}"
-  else
-    echo "Skipping Homebrew formula installation."
-  fi
+  # Check if running on Amazon Linux 2023
+  if [[ -f /etc/os-release ]]; then
+    . /etc/os-release
+    if [[ "$ID" == "amzn" && "$VERSION_ID" == "2023" ]]; then
+      # Amazon Linux 2023 - install directly without confirmation
+      echo "Amazon Linux 2023 detected - installing Homebrew formulae automatically..."
+      /home/linuxbrew/.linuxbrew/bin/brew install "${formulae[@]}"
+      
+      # Install Linux-specific casks
+      if [[ ${#linux_casks[@]} -gt 0 ]]; then
+        echo "Installing Linux-specific casks..."
+        /home/linuxbrew/.linuxbrew/bin/brew install --cask "${linux_casks[@]}"
+      fi
+      
+      # Also change shell to fish automatically for Amazon Linux 2023
+      echo "Changing default shell to fish..."
+      sudo usermod -s /home/linuxbrew/.linuxbrew/bin/fish "$(whoami)"
+    else
+      # Other Linux distributions - ask for confirmation
+      read -p "Do you want to install Homebrew formulas? [y/N] " confirm
+      if [[ "$confirm" =~ ^[Yy]$ ]]; then
+        /home/linuxbrew/.linuxbrew/bin/brew install "${formulae[@]}"
+      else
+        echo "Skipping Homebrew formula installation."
+      fi
 
-  read -p "Do you want to change your shell to fish? [y/N] " confirm
-  if [[ "$confirm" =~ ^[Yy]$ ]]; then
-    sudo usermod -s /home/linuxbrew/.linuxbrew/bin/fish "$(whoami)"
+      read -p "Do you want to change your shell to fish? [y/N] " confirm
+      if [[ "$confirm" =~ ^[Yy]$ ]]; then
+        sudo usermod -s /home/linuxbrew/.linuxbrew/bin/fish "$(whoami)"
+      else
+        echo "Skipping shell change."
+      fi
+    fi
   else
-    echo "Skipping shell change."
+    # Fallback for systems without /etc/os-release
+    read -p "Do you want to install Homebrew formulas? [y/N] " confirm
+    if [[ "$confirm" =~ ^[Yy]$ ]]; then
+      /home/linuxbrew/.linuxbrew/bin/brew install "${formulae[@]}"
+    else
+      echo "Skipping Homebrew formula installation."
+    fi
+
+    read -p "Do you want to change your shell to fish? [y/N] " confirm
+    if [[ "$confirm" =~ ^[Yy]$ ]]; then
+      sudo usermod -s /home/linuxbrew/.linuxbrew/bin/fish "$(whoami)"
+    else
+      echo "Skipping shell change."
+    fi
   fi
 {{ end }}
 
