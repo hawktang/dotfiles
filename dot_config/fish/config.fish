@@ -17,7 +17,7 @@ fish_config theme choose "Tomorrow Night"
 # Check if running on Amazon Linux 2023 and set proxy
 if test -f /etc/os-release
     set os_info (cat /etc/os-release)
-    if string match -q "*ID=amzn*" $os_info; and string match -q "*VERSION_ID=\"2023\"*" $os_info
+    if string match -q '*ID="amzn"*' $os_info; and string match -q '*VERSION_ID="2023"*' $os_info
         # Set proxy for Amazon Linux 2023
         set -gx http_proxy 'http://proxy.sin.services.nonprod.c0.sq.com.sg:3128'
         set -gx https_proxy 'http://proxy.sin.services.nonprod.c0.sq.com.sg:3128'
