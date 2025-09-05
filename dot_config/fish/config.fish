@@ -33,7 +33,7 @@ if test -f /etc/os-release
         set -gx CLOUD_ML_REGION global
         set -gx ANTHROPIC_VERTEX_PROJECT_ID sia-data-team
         # Optional: Disable prompt caching if needed
-        # set -gx DISABLE_PROMPT_CACHING 1
+        set -gx DISABLE_PROMPT_CACHING 0
         
         # When CLOUD_ML_REGION=global, override region for unsupported models
         set -gx VERTEX_REGION_CLAUDE_3_5_HAIKU us-east5
