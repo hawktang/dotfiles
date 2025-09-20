@@ -129,7 +129,7 @@ install_homebrew() {
   fi
   
   # Set NONINTERACTIVE mode for Homebrew installer to avoid prompts
-  export NONINTERACTIVE=1
+  # export NONINTERACTIVE=1
   
   # First try the official installer
   echo "Attempting standard Homebrew installation..."
