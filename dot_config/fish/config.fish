@@ -75,9 +75,12 @@ end
 # end
 
 fzf --fish | source
-atuin init fish | source
 starship init fish | source
 zoxide init fish | source
+
+atuin init fish --disable-up-arrow | source
+# Bind up arrow to atuin search using new syntax
+bind \e\[A _atuin_search
 
 
 
